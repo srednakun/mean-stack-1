@@ -2,7 +2,7 @@
   text-transform: uppercase;
   background: $background;
   color: $text-color;
-  border: 1px solid black; //temporary
+  border: 1px solid black;
   border-radius: 5px;
   padding-top: .5em;
   padding-bottom: .5em;
@@ -28,6 +28,7 @@
 
 .button-learn {
   background: transparent;
+  border: 1px solid white;
 }
 
 
