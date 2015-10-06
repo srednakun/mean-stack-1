@@ -8,6 +8,9 @@
     content: "•";
     color: color(base);
   }
+  li:first-child:before {
+    display: none;
+  }
   a {
     color: color(base);
   }
