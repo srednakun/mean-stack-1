@@ -51,3 +51,43 @@ h1, h2, p, figure, blockquote {
   src: url("/css/fonts/icomoon.eot?vjxn5v#iefix") format("embedded-opentype"), url("/css/fonts/icomoon.ttf?vjxn5v") format("truetype"), url("/css/fonts/icomoon.woff?vjxn5v") format("woff"), url("/css/fonts/icomoon.svg?vjxn5v#icomoon") format("svg");
   font-weight: normal;
   font-style: normal; }
+
+.button-big,
+.button-read,
+.button-learn {
+  text-transform: uppercase;
+  background: black;
+  color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  padding-left: 2em;
+  padding-right: 2em; }
+
+.button-change,
+.button-contact {
+  background: white;
+  color: black; }
+
+.button-contact {
+  font-weight: bold; }
+
+.button-learn {
+  background: transparent;
+  border: 1px solid white; }
+
+.button-small {
+  text-transform: uppercase;
+  background: white;
+  color: black;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  padding-left: 1em;
+  padding-right: 1em; }
+
+.button-small:hover {
+  background: black;
+  color: white; }
