@@ -35,14 +35,14 @@
   }
 
   .blog-post {
-    padding: 2em 0;
-    margin: 2em 20%;
+    padding: 0 0 2em;
+    margin: 6em 20% 5em;
     text-align: left;
     border-bottom: 1px solid shades-primary(2);
 
 
     h1 {
-      font-size: 2.5em;
+      font-size: 3em;
       padding-left: 0;
       padding-bottom: 1em;
     }
@@ -51,15 +51,19 @@
       font-family: $font-primary;
       font-weight: weight(light);
       font-size: font-size(2);
-      line-height: 1.5;
+      color: shades-primary(2);
+      line-height: 2.75rem;
       padding-bottom: 1em;
     }
 
     li {
       text-align: left;
-      color: shades-primary(2);
+      font-style: italic;
       padding-left: 0;
       padding-right: 10px;
+      a {
+        color: shades-primary(2);
+      }
     }
 
     li:before {
@@ -88,7 +92,7 @@
     @include align-items(center);
     @include justify-content(space-between);
 
-    padding-top: 2em;
+    padding-top: 1em;
     width: 60%;
     margin: 0 auto;
 
