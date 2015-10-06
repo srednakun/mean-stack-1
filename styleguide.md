@@ -6,10 +6,10 @@
 
 ```
 $theme-colors: (
-    primary: #1e1d24,
-    accent: #97f1e7,
-    secondary: #bbbbbd,
-    base: #ffffff
+    primary: #1e1d24,   //
+    accent: #97f1e7,    //
+    secondary: #bbbbbd, //
+    base: #ffffff       // White
 );
 ```
 
