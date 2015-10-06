@@ -1,9 +1,9 @@
 .icon-circle {
 	border-radius: 50%;
-	width: 10em ;
-	height: 10em;
-	padding-top: 2.7em;
-	padding-bottom: 2.7em;
+	width: 8em ;
+	height: 8em;
+	padding-top: 3.5em;
+	padding-bottom: 2.5em;
 	padding-right: 1.2em;
 	padding-left: 1.2em;
 	border: .12em solid color(secondary);
@@ -14,26 +14,23 @@
 .social-link-footer {
 	display: inline-block;
 	li {
-
 		margin-right: 2em;
 		display: inline-block;
 		.icon-circle {
 			.footer-icon {
 				left: 0;
-				bottom: 1.9em;
+				bottom: 1.8em;
 				position: absolute;
-				font-size: 2.5em;
+				font-size: 3em;
 				color: color(primary);
 				background-color: color(base);
 			}
 		}
 	}
-
 }
 .icon-text {
 	color: color(primary);
 	font-family: Ubuntu;
 	font-size: font-size(0);
 	font-weight: weight(bold);
-	line-height: 5em;
 }
