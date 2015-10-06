@@ -1,0 +1,40 @@
+footer {
+  background: pink;
+  margin-top: 5em; // ERASE THIS TEMPORARY SPACING
+
+  .footer-top {
+    @include display(flex);
+    @include flex-direction(row);
+    @include align-items(center);
+    @include justify-content(space-between);
+    padding-top: 2em;
+
+    a {
+      font-family: $font-primary;
+      padding-left: 50px;
+    }
+
+    .email-phone {
+      display: block;
+      background: orange;
+      padding-left: 0;
+      margin-left: -25%;
+    }
+
+    ul {
+      display: inline-block;
+      padding-right: 1em;
+
+
+      li {
+        display: inline;
+      }
+
+      li a {
+        padding: 0;
+      }
+    }
+
+  }
+
+}
