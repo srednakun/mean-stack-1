@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box; }
 
@@ -91,6 +92,18 @@ h1, h2, p, figure, blockquote {
 .button-small:hover {
   background: black;
   color: white; }
+
+.top-navigation {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.238em; }
+  .top-navigation li:before {
+    content: "•";
+    color: #ffffff; }
+  .top-navigation a {
+    color: #ffffff; }
 
 .title-description {
   font-family: "Roboto Slab", sans-serif;
