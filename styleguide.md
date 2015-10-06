@@ -13,16 +13,10 @@ $theme-colors: (
 );
 ```
 
-### Misc. Colors
+Example:
+`color: color(primary);`
 
-```
-$text-colors: (
-    primary: #1e1d24, // Should probably be (color(primary);), blog h1
-    secondary: #bbbbbd, // Blog post summary, meta data
-    alternative: #bdbdbf, // share, social links, shade of primary
-    base: #ffffff // logo, nav, read more, bottom blue
-);
-```
+### Misc. Colors
 
 ```
 $shades-primary: (
@@ -34,6 +28,9 @@ $shades-primary: (
 );
 ```
 
+Example:
+`border-color: shades-primary(1);`
+
 ```
 $shades-accent: (
     -2: mix(black, color(accent), 40%),
@@ -41,6 +38,9 @@ $shades-accent: (
     1: mix(white, color(accent), 50%);
 );
 ```
+
+Example:
+`border-color: shades-accent(-1);`
 
 ## Typography
 
@@ -62,6 +62,9 @@ $font-weights: (
 );
 ```
 
+Example:
+`font-weight: font-weight(light);`
+
 ### Font Sizes
 
 ```
@@ -77,9 +80,13 @@ $modular-scale: ( // Perfect Fourth
 );
 ```
 
+Example:
+`font-size: font-size(3);`
+
 ## Guide: Colors & Typography
 
 Header Background: color(primary);
+Logo color: color(base);
 Header Text: color(base);
 Page Header: color(primary);
 Page Description: mix(black, color(accent), 40%);
