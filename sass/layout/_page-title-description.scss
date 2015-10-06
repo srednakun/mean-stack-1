@@ -1,0 +1,9 @@
+.title-description {
+  @extend %section-padding-top-bottom;
+  h1 {
+    margin-bottom: font-size(1);
+  }
+  p {
+    max-width: 70rem;
+  }
+}

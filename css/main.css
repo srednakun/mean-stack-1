@@ -1,3 +1,7 @@
+@charset "UTF-8";
+.title-description, header {
+  padding: 3.157rem 0; }
+
 * {
   box-sizing: border-box; }
 
@@ -52,6 +56,41 @@ h1, h2, p, figure, blockquote {
   font-weight: normal;
   font-style: normal; }
 
+header {
+  background-color: #1e1d24; }
+  header h1 {
+    display: inline-block; }
+
+.top-navigation {
+  display: inline-block; }
+  .top-navigation ul {
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+    -ms-flex-pack: justify; }
+  .top-navigation li {
+    display: inline-block; }
+  .top-navigation a {
+    margin: 0 1rem; }
+
+.title-description h1 {
+  margin-bottom: 1.333rem; }
+
+.title-description p {
+  max-width: 70rem; }
+
 .button-big,
 .button-read,
 .button-learn {
@@ -91,6 +130,45 @@ h1, h2, p, figure, blockquote {
 .button-small:hover {
   background: black;
   color: white; }
+
+header {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: justify; }
+  header h1 {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-size: 2.369rem;
+    color: #ffffff; }
+
+.top-navigation {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.238em; }
+  .top-navigation li:before {
+    content: "•";
+    color: #ffffff; }
+  .top-navigation li:first-child:before {
+    display: none; }
+  .top-navigation a {
+    color: #ffffff; }
+  .top-navigation a:hover {
+    color: #97f1e7; }
 
 .title-description {
   font-family: "Roboto Slab", sans-serif;
