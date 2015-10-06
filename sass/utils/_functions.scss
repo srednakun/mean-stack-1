@@ -10,10 +10,14 @@
   @return map-get($shades-accent, $key);
 }
 
-@function font-weight($key: 'regular') {
+@function weight($key: 'regular') {
   @return map-get($font-weights, $key);
 }
 
 @function font-size($key: '0') {
   @return map-get($modular-scale, $key);
+}
+
+@function fonts($key: 'primary') {
+  @return map-get($fonts, $key);
 }

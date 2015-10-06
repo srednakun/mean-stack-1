@@ -1,3 +1,23 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  width: 100%;
+  margin: 0 auto; }
+
+ul {
+  padding: 0; }
+
+li, a {
+  text-decoration: none; }
+
+li {
+  list-style: none; }
+
+h1, h2, p, figure, blockquote {
+  margin: 0;
+  font-weight: normal; }
+
 [class^="icon-"], [class*=" icon-"] {
   font-family: 'icomoon';
   speak: none;
@@ -24,26 +44,6 @@
 
 .icon-pinterest:before {
   content: "\e804"; }
-
-* {
-  box-sizing: border-box; }
-
-body {
-  width: 100%;
-  margin: 0 auto; }
-
-ul {
-  padding: 0; }
-
-li, a {
-  text-decoration: none; }
-
-li {
-  list-style: none; }
-
-h1, h2, p, figure, blockquote {
-  margin: 0;
-  font-weight: normal; }
 
 @font-face {
   font-family: 'icomoon';
@@ -91,3 +91,16 @@ h1, h2, p, figure, blockquote {
 .button-small:hover {
   background: black;
   color: white; }
+
+.title-description {
+  font-family: "Roboto Slab", sans-serif;
+  background-color: #97f1e7; }
+  .title-description h1 {
+    font-weight: 400;
+    font-size: 3.33em;
+    color: #1e1d24; }
+  .title-description p {
+    font-weight: 300;
+    font-size: 2.369rem;
+    line-height: 3.5rem;
+    color: #5b918b; }

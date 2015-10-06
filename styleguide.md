@@ -63,7 +63,7 @@ $font-weights: (
 ```
 
 Example:
-`font-weight: font-weight(light);`
+`font-weight: weight(light);`
 
 ### Font Sizes
 
@@ -83,25 +83,27 @@ $modular-scale: ( // Perfect Fourth
 Example:
 `font-size: font-size(3);`
 
-## Guide: Colors & Typography
+## Guide: Colors & Typography by Section
 
+### Colors
 Header Background: color(primary);
 Logo color: color(base);
 Header Text: color(base);
 Page Header: color(primary);
-Page Description: mix(black, color(accent), 40%);
-Share & Social Links: mix(white, color(primary), 77%);
-Blog Summary & Meta: mix(white, color(primary), 70%);
-Prev, Next, 1/2/3: mix(white, color(primary), 52.5%);
-Last Section P: mix(white, color(accent), 50%);
+Page Description: shades-accent(-2);
+Share & Social Links: shades-primary(3);
+Blog Summary & Meta: shades-primary(2);
+Prev, Next, 1/2/3: shades-primary(1);
+Last Section P: shades-accent(1);
 Contact Text: #000;
 Footer Text: #000;
-Border Bottom Page Description: mix(black, color(accent), 15.4%);
-Border Bottom Breadcrumbs, Border top footer: mix(white, color(primary), 80.3%);
-Border Bottom Blog Post: mix(white, color(primary), 90%);
-Border Prev/Next: mix(white, color(primary), 52.5%);
-Social Links Border: mix(white, color(primary), 70.5%);
+Border Bottom Page Description: shades-accent(-1);
+Border Bottom Breadcrumbs, Border top footer: shades-primary(4);
+Border Bottom Blog Post: shades-primary(5);
+Border Prev/Next: shades-primary(1);
+Social Links Border: shades-primary(2);
 
+### Font Styles
 Logo:  ---------- Ubuntu, Medium, 56pt        font-size(3);
 Navigation: ----- Ubuntu, Regular, 24pt       font-size(0);
 Page Header: ---- Robotoslab, Regular, 80pt   3.33em;

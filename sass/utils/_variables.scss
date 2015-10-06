@@ -6,18 +6,21 @@ $theme-colors: (
 );
 
 $shades-primary: (
-  1: mix(white, color(primary), 52.5%),
-  2: mix(white, color(primary), 70%),
-  3: mix(white, color(primary), 77%),
-  4: mix(white, color(primary), 80%),
-  5: mix(white, color(primary), 90%)
+  1: mix(white, map-get($theme-colors, primary), 52.5%),
+  2: mix(white, map-get($theme-colors, primary), 70%),
+  3: mix(white, map-get($theme-colors, primary), 77%),
+  4: mix(white, map-get($theme-colors, primary), 80%),
+  5: mix(white, map-get($theme-colors, primary), 90%)
 );
 
 $shades-accent: (
-  -2: mix(black, color(accent), 40%),
-  -1: mix(black, color(accent), 15.4%);
-  1: mix(white, color(accent), 50%);
+  -2: mix(black, map-get($theme-colors, accent), 40%),
+  -1: mix(black, map-get($theme-colors, accent), 15.4%),
+  1: mix(white, map-get($theme-colors, accent), 50%)
 );
+
+$font-primary: 'Ubuntu', sans-serif;
+$font-secondary: 'Roboto Slab', sans-serif;
 
 $modular-scale: (
   -1: 0.75rem,
