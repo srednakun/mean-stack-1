@@ -1,3 +1,23 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  width: 100%;
+  margin: 0 auto; }
+
+ul {
+  padding: 0; }
+
+li, a {
+  text-decoration: none; }
+
+li {
+  list-style: none; }
+
+h1, h2, p, figure, blockquote {
+  margin: 0;
+  font-weight: normal; }
+
 [class^="icon-"], [class*=" icon-"] {
   font-family: 'icomoon';
   speak: none;
@@ -25,29 +45,62 @@
 .icon-pinterest:before {
   content: "\e804"; }
 
-* {
-  box-sizing: border-box; }
-
-body {
-  width: 100%;
-  margin: 0 auto; }
-
-ul {
-  padding: 0; }
-
-li, a {
-  text-decoration: none; }
-
-li {
-  list-style: none; }
-
-h1, h2, p, figure, blockquote {
-  margin: 0;
-  font-weight: normal; }
-
 @font-face {
   font-family: 'icomoon';
   src: url("/css/fonts/icomoon.eot?vjxn5v");
   src: url("/css/fonts/icomoon.eot?vjxn5v#iefix") format("embedded-opentype"), url("/css/fonts/icomoon.ttf?vjxn5v") format("truetype"), url("/css/fonts/icomoon.woff?vjxn5v") format("woff"), url("/css/fonts/icomoon.svg?vjxn5v#icomoon") format("svg");
   font-weight: normal;
   font-style: normal; }
+
+.button-big,
+.button-read,
+.button-learn {
+  text-transform: uppercase;
+  background: black;
+  color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  padding-left: 2em;
+  padding-right: 2em; }
+
+.button-change,
+.button-contact {
+  background: white;
+  color: black; }
+
+.button-contact {
+  font-weight: bold; }
+
+.button-learn {
+  background: transparent;
+  border: 1px solid white; }
+
+.button-small {
+  text-transform: uppercase;
+  background: white;
+  color: black;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  padding-left: 1em;
+  padding-right: 1em; }
+
+.button-small:hover {
+  background: black;
+  color: white; }
+
+.title-description {
+  font-family: "Roboto Slab", sans-serif;
+  background-color: #97f1e7; }
+  .title-description h1 {
+    font-weight: 400;
+    font-size: 3.33em;
+    color: #1e1d24; }
+  .title-description p {
+    font-weight: 300;
+    font-size: 2.369rem;
+    line-height: 3.5rem;
+    color: #5b918b; }
