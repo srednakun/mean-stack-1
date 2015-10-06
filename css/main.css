@@ -104,3 +104,36 @@ h1, h2, p, figure, blockquote {
     font-size: 2.369rem;
     line-height: 3.5rem;
     color: #5b918b; }
+
+.icon-circle {
+  border-radius: 50%;
+  width: 10em;
+  height: 10em;
+  padding-top: 2.7em;
+  padding-bottom: 2.7em;
+  padding-right: 1.2em;
+  padding-left: 1.2em;
+  border: 0.12em solid #bbbbbd;
+  position: relative;
+  display: block;
+  text-align: center; }
+
+.social-link-footer {
+  display: inline-block; }
+  .social-link-footer li {
+    margin-right: 2em;
+    display: inline-block; }
+    .social-link-footer li .icon-circle .footer-icon {
+      left: 0;
+      bottom: 1.9em;
+      position: absolute;
+      font-size: 2.5em;
+      color: #1e1d24;
+      background-color: #ffffff; }
+
+.icon-text {
+  color: #1e1d24;
+  font-family: Ubuntu;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 5em; }
