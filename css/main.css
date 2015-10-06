@@ -1,4 +1,7 @@
 @charset "UTF-8";
+.title-description, header {
+  padding: 3.157rem 0; }
+
 * {
   box-sizing: border-box; }
 
@@ -53,8 +56,13 @@ h1, h2, p, figure, blockquote {
   font-weight: normal;
   font-style: normal; }
 
+header {
+  background-color: #1e1d24; }
+  header h1 {
+    display: inline-block; }
+
 .top-navigation {
-  max-width: 40em; }
+  display: inline-block; }
   .top-navigation ul {
     display: -webkit-box;
     display: -moz-box;
@@ -76,6 +84,12 @@ h1, h2, p, figure, blockquote {
     display: inline-block; }
   .top-navigation a {
     margin: 0 1rem; }
+
+.title-description h1 {
+  margin-bottom: 1.333rem; }
+
+.title-description p {
+  max-width: 70rem; }
 
 .button-big,
 .button-read,
@@ -117,6 +131,29 @@ h1, h2, p, figure, blockquote {
   background: black;
   color: white; }
 
+header {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: justify; }
+  header h1 {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-size: 2.369rem;
+    color: #ffffff; }
+
 .top-navigation {
   font-family: "Ubuntu", sans-serif;
   font-weight: 400;
@@ -130,6 +167,8 @@ h1, h2, p, figure, blockquote {
     display: none; }
   .top-navigation a {
     color: #ffffff; }
+  .top-navigation a:hover {
+    color: #97f1e7; }
 
 .title-description {
   font-family: "Roboto Slab", sans-serif;
