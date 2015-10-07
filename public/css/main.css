@@ -1,6 +1,6 @@
 @charset "UTF-8";
-.title-description, header {
-  padding: 3.157rem 0; }
+.title-description, .feature, header {
+  padding: 6em 0; }
 
 * {
   box-sizing: border-box; }
@@ -97,6 +97,20 @@ header {
 .title-description p {
   max-width: 70rem; }
 
+.blog {
+  margin-bottom: 6em; }
+
+.feature h1 {
+  margin-bottom: 3.157rem; }
+
+.feature p {
+  max-width: 38em;
+  margin: 0 auto 3.157rem; }
+
+.feature .button-feature {
+  margin-left: 1.333rem;
+  margin-right: 1.333rem; }
+
 .big-indent-left {
   margin-left: 5em; }
 
@@ -107,8 +121,7 @@ header {
   margin-left: 3.5em; }
 
 .button-big,
-.button-read,
-.button-learn {
+.button-read {
   text-transform: uppercase;
   background: black;
   color: white;
@@ -116,22 +129,23 @@ header {
   border-radius: 5px;
   padding-top: 1em;
   padding-bottom: 1em;
-  padding-left: 3em;
-  padding-right: 3em;
+  padding-left: 2em;
+  padding-right: 2em;
   font-family: "Ubuntu", sans-serif;
   font-size: 1rem; }
 
 .button-change,
-.button-contact {
+.button-feature:hover {
   background: white;
   color: black; }
 
-.button-contact {
-  font-weight: bold; }
+.button-feature:hover {
+  font-weight: 400; }
 
-.button-learn {
+.button-feature {
   background: transparent;
-  border: 1px solid white; }
+  border: 1px solid white;
+  font-weight: 400; }
 
 .button-small {
   text-transform: uppercase;
@@ -191,7 +205,8 @@ header {
 
 .title-description {
   font-family: "Roboto Slab", sans-serif;
-  background-color: #97f1e7; }
+  background-color: #97f1e7;
+  border-bottom: 2px solid #80ccc3; }
   .title-description h1 {
     font-weight: 400;
     font-size: 3.33em;
@@ -258,25 +273,28 @@ header {
     color: #bcbbbd;
     text-align: right; }
   .blog .blog-post {
-    padding: 2em 0;
-    margin: 2em 20%;
+    padding: 0 0 2em;
+    margin: 6em 20% 5em;
     text-align: left;
     border-bottom: 1px solid #bcbbbd; }
     .blog .blog-post h1 {
-      font-size: 2.5em;
+      font-size: 3em;
       padding-left: 0;
       padding-bottom: 1em; }
     .blog .blog-post p {
       font-family: "Ubuntu", sans-serif;
       font-weight: 300;
       font-size: 1.777rem;
-      line-height: 1.5;
+      color: #bcbbbd;
+      line-height: 2.75rem;
       padding-bottom: 1em; }
     .blog .blog-post li {
       text-align: left;
-      color: #bcbbbd;
+      font-style: italic;
       padding-left: 0;
       padding-right: 10px; }
+      .blog .blog-post li a {
+        color: #bcbbbd; }
     .blog .blog-post li:before {
       content: "•";
       padding-right: 10px; }
@@ -324,7 +342,7 @@ header {
     -o-justify-content: space-between;
     justify-content: space-between;
     -ms-flex-pack: justify;
-    padding-top: 2em;
+    padding-top: 1em;
     width: 60%;
     margin: 0 auto; }
     .blog nav ul {
@@ -385,3 +403,21 @@ footer .footer-bottom {
     font-size: .917em;
     font-family: "Ubuntu", sans-serif;
     padding: 0 0.5em; }
+
+.feature {
+  font-family: "Ubuntu", sans-serif;
+  text-align: center;
+  background-color: #97f1e7; }
+  .feature h1 {
+    font-weight: 400;
+    font-size: 3em;
+    line-height: 1;
+    color: #ffffff; }
+  .feature p {
+    font-weight: 400;
+    font-size: 1.333rem;
+    line-height: 2.25;
+    color: #cbf8f3; }
+  .feature .button-feature {
+    padding-top: 1em;
+    padding-bottom: 1em; }
