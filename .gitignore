@@ -28,3 +28,6 @@ node_modules
 
 # Compiled CSS file
 css/main.css
+
+# Server
+server.js
