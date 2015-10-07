@@ -4,17 +4,18 @@
   color: $text-color;
   border: 1px solid black;
   border-radius: 5px;
-  padding-top: .5em;
-  padding-bottom: .5em;
+  padding-top: 1em;
+  padding-bottom: 1em;
   padding-left: $size;
   padding-right: $size;
   font-family: $font-primary;
+  font-size: font-size(0);
 }
 
 .button-big,
 .button-read,
 .button-learn {
-  @include button(black, white, 2em);
+  @include button(black, white, 3em);
 }
 
 .button-change,

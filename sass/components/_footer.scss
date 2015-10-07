@@ -1,6 +1,4 @@
 footer {
-  background: pink;
-  margin-top: 5em; // ERASE THIS TEMPORARY SPACING
 
   .footer-top {
     @include display(flex);
@@ -8,33 +6,28 @@ footer {
     @include align-items(center);
     @include justify-content(space-between);
     padding-top: 2em;
+    border-bottom: 1px solid shades-primary(4);
+
 
     a {
       font-family: $font-primary;
-      padding-left: 50px;
     }
 
     .email-phone {
       display: block;
-      background: orange;
       padding-left: 0;
       margin-left: -25%;
     }
-
-    ul {
-      display: inline-block;
-      padding-right: 1em;
-
-
-      li {
-        display: inline;
-      }
-
-      li a {
-        padding: 0;
-      }
-    }
-
   }
 
+  .footer-bottom {
+    text-align: center;
+    margin: 2em auto;
+
+    li {
+      font-size: .917em;
+      font-family: $font-primary;
+      padding: 0 .5em;
+    }
+  }
 }

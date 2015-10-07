@@ -12,7 +12,7 @@
 	text-align: center;
 }
 .social-link-footer {
-	display: inline-block;
+
 	li {
 		margin-right: 2em;
 		display: inline-block;
@@ -31,6 +31,7 @@
 .icon-text {
 	color: color(primary);
 	font-family: Ubuntu;
-	font-size: font-size(0);
+	font-size: font-size(-1);
 	font-weight: weight(bold);
+
 }
