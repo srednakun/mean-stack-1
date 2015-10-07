@@ -1,3 +1,9 @@
 %section-padding-top-bottom {
   padding: font-size(4) 0;
 }
+@mixin margin-right($margin) {
+	margin-right: $margin;
+}
+@mixin margin-left($margin) {
+	margin-left: $margin;
+}
