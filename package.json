@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/pstrum/mean-stack-1#readme",
   "devDependencies": {
+    "angular": "^1.4.7",
     "bourbon": "^4.2.5",
     "gulp": "^3.9.0",
     "gulp-sass": "^2.0.4",
