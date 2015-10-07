@@ -7,6 +7,7 @@ $theme-colors: (
   base: #ffffff
 );
 
+
 $shades-primary: (
   1: mix(white, map-get($theme-colors, primary), 52.5%),
   2: mix(white, map-get($theme-colors, primary), 70%),
