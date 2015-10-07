@@ -30,5 +30,3 @@ node_modules
 css/main.css
 public/css/main.css
 
-# Server
-server.js
