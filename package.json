@@ -16,13 +16,12 @@
     "url": "https://github.com/pstrum/mean-stack-1/issues"
   },
   "homepage": "https://github.com/pstrum/mean-stack-1#readme",
-  "devDependencies": {
-    "bourbon": "^4.2.5",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
     "gulp": "^3.9.0",
     "gulp-sass": "^2.0.4",
+    "mongoose": "^4.1.10",
     "node-bourbon": "^4.2.3"
-  },
-  "dependencies": {
-    "express": "^4.13.3"
   }
 }
