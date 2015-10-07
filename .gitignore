@@ -27,4 +27,7 @@ build/Release
 node_modules
 
 # Compiled CSS file
-css/main.css
+public/css/main.css
+
+# Server
+server.js
