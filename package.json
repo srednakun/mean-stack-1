@@ -16,8 +16,6 @@
     "url": "https://github.com/pstrum/mean-stack-1/issues"
   },
   "homepage": "https://github.com/pstrum/mean-stack-1#readme",
-  "devDependencies": {
-    "angular": "^1.4.7",
   "dependencies": {
     "angular": "^1.4.7",
     "angular-route": "^1.4.7",

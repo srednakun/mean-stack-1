@@ -1,10 +1,9 @@
 // Organize and share code around out app
-
 (function() {
 
   "use strict";
 
-  angular.module("app").service("BlogService", ["$http", function ($http) {
+  angular.module("app").service("BlogsService", ["$http", function ($http) {
 
     var urlRoot = "/api/blog-post";
 
