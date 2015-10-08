@@ -1,18 +1,17 @@
 (function() {
+  "use strict"
+
   var app = angular.module('app', ["ngRoute"]);
 
-  // app.controller('BlogController', function() {
-  //   this.blogs = blogs;
-  app.config(["$routeProvider",
-    function($routeProvider) {
-      $routeProvider.
-      when('/blog-post', {
-        templateUrl: 'js/partials/blog-post.html',
-        controller: "BlogCtrl as vm"
+
+  app.config(["$routeProvider", function($routeProvider) {
+      $routeProvider.when('/blog-post', {
+        templateUrl: "js/partials/blog-post.html",
+        controller: "BlogsCtrl as vm"  // Problem Here
       }).
       when('/blog-post/:blog_id', {
-        templateUrl: 'js/partials/blog-post-detail.html',
-        controller: "BlobPostCtrl as vm"
+        templateUrl: "js/partials/blog-post-detail.html",
+        controller: "BlogsCtrl as vm"
       }).
       otherwise({
         redirectTo: "/blog-post"
