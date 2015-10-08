@@ -4,6 +4,7 @@
 
   "use strict";
 
+
   angular.module("app").service("BlogService", ["$http", function ($http) {
 
     var urlRoot = "/api/blog-post";
