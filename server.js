@@ -36,7 +36,7 @@ router.use(function(req, res, next) {
 });
 // Define the home route (accessed at GET localhost:8000/api)
 router.get('/', function(req, res) {
-    res.json({ message: 'WHOOT WHOOP! WELCOME to our API!' });
+    res.json({ message: 'YOLO! WELCOME to our API!' });
 });
 // app.route('/').get(function(req, res) {
 //    res.sendFile('index.html', {root: __dirname + '/public'});
@@ -85,7 +85,9 @@ router.route('/blog-post/:blog_id')
       if (err)
         res.send(err);
       // Update the post info
-      blog.name = req.body.name;
+      blog.title = req.body.title;
+      blog.author = req.body.author;
+      blog.content = req.body.content;
       // Save the post!
       blog.save(function(err) {
         if (err)
