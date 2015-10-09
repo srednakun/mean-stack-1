@@ -1,6 +1,6 @@
 (function () {
 
-  angular.module("intellyApp").controller("BlogCtrl", ["BlogsService", "$routeParams", function (BlogsService, $routeParams) {
+  angular.module("intellyApp").controller("BlogsCtrl", ["BlogsService", "$routeParams", function (BlogsService, $routeParams) {
 
     var vm = this;
 
@@ -15,10 +15,9 @@
         .then(function (resp) {
           vm.blog = resp.data;
           console.log(vm.blog + ' the bomb diggity');
+          console.log(vm.blog[1]);
         });
     }
-
-    console.log(vm.posts);
 
   }]);
 })();

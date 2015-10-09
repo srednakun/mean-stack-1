@@ -1,5 +1,6 @@
 (function() {
 
+  "use strict";
 
   // Declare variable app, which equals a new AngularJS module
   // with the name 'intelly'. ngRoute is a dependency used for
@@ -23,10 +24,10 @@
         templateUrl: "js/partials/blog-post.html",
         controller: "BlogsCtrl as vm"
       })
-      .when('/blog-post/:blog_id', {
-        templateUrl: "js/partials/blog-post-detail.html",
-        controller: "BlogsCtrl as vm"
-      })
+      // .when('/blog-post/:blog_id', {
+      //   templateUrl: "js/partials/blog-post-detail.html",
+      //   controller: "BlogsCtrl as vm"
+      // })
       .otherwise({
         redirectTo: "/blog-post"
       });
