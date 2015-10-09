@@ -5,7 +5,7 @@
     <li><a href="user">By {{ blog.author }}</li>
     <li><a href="user">{{blog.date}}</li>
     <li><a href="user">4 comments</li>
-    <li>{{ blog._id }}</li>
   </ul>
   <a href="#/blog-post/{{ blog._id }}" class="button-big button-read">Read More</a>
+  <button ng-click="vm.delete(blog)" class="button-big button-read">Delete</button>
 </article>
