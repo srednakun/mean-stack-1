@@ -6,8 +6,6 @@
 
     var vm = this;
 
-    vm.delete = deleteBlog;
-
     vm.save = submitForm;
 
     vm.blog = {};
@@ -35,7 +33,9 @@
     }
 
       function deleteBlog (blog) {
-        BlogsService.delete(blog);
+        BlogsService.delete(blog).then(function () {
+        getBlogs();
+      });
     }
 
   }]);
