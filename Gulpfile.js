@@ -8,7 +8,7 @@ gulp.task("sass", function() {
       includePaths: require("node-bourbon").includePaths
     })
       .on("error", sass.logError))
-    .pipe(gulp.dest("./public/css"));
+    .pipe(gulp.dest("./css"));
 });
 
 gulp.task('watch', function() {
@@ -26,3 +26,4 @@ gulp.task("express", function() {
 gulp.task("serve", ["sass", "express", "watch"], function() {
 	
 });
+
