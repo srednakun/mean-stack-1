@@ -1,5 +1,6 @@
 <!doctype html>
-<html class="no-js" lang="Eng" ng-app="intellyApp">
+
+<html class="no-js" lang="en" ng-app="intellyApp">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -41,7 +42,23 @@
             </ul>
         </div>
 
-        <div ng-view></div>
+        <div ng-view>
+        </div>
+<!--         <form class="create-post" ng-submit="vm.save()">
+          <input type="text" ng-model="vm.blog.title" placeholder="Your great post title" />
+          <textarea name="message" ng-model="vm.blog.content" placeholder="Words of greatness..."></textarea>
+          <input type="submit" name="POST!" class="button-big">
+        </form> -->
+<!--         <article class="blog-post" ng-repeat="blog in blog.blogs">
+          <h1>{{ blog.title }}</h1>
+          <p>{{ blog.content }}</p>
+          <ul>
+            <li><a href="user">By {{ blog.author }}</a></li>
+            <li><a href="user">{{blog.date}}</a></li>
+            <li><a href="user">4 comments</a></li>
+          </ul>
+          <a href="article" class="button-big button-read">Read More</a>
+        </article> -->
 
         <nav>
           <a href="prev" class="button-big button-change">Prev</a>
@@ -52,6 +69,7 @@
           </ul>
           <a href="next" class="button-big button-change">Next</a>
         </nav>
+        <a href="#/blog-post/new" class="button-big button-create">New Blog Post</a>
       </section>
       <section class="feature">
         <h1>Serene in their assurance of their empire over matter</h1>
@@ -81,9 +99,14 @@
         <li><a href="Support">Support</a></li>
       </ul>
     </footer>
+
     <script src="/angular/angular.js"></script>
     <script src="/angular-route/angular-route.js"></script>
     <script src="/js/app.js"></script>
+    <script src="/js/blog.ctrl.js"></script>
+    <script src="/js/blog_form.ctrl.js"></script>
+    <script src="/js/blog.service.js"></script>
+    <script src="/js/blogs.ctrl.js"></script>
 
     <script src="/js/blog.ctrl.js"></script>
     <script src="/js/blog.service.js"></script>

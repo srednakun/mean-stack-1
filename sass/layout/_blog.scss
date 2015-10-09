@@ -1,3 +1,31 @@
 .blog {
   margin-bottom: 6em;
+
+  .button-create {
+    display: block;
+    max-width: 12em;
+    margin: 2em auto 0;
+  }
+
+  .create-post {
+    width: 30em;
+    margin: 2em auto;
+    input {
+      display: block;
+    }
+    input[type=text], textarea {
+      width: 100%;
+      margin-bottom: font-size(1);
+    }
+    ul {
+      @include display(flex);
+      @include justify-content(space-between);
+      margin: 0;
+      width: 100%;
+    }
+    li {
+      display: inline-block;
+    }
+  }
+
 }
