@@ -6,6 +6,8 @@
 
     var vm = this;
 
+    vm.delete = deleteBlog;
+
     vm.save = submitForm;
 
     vm.blog = {};
@@ -31,5 +33,10 @@
         $location.path("/blog-post/" + resp.data._id);
       });
     }
+
+      function deleteBlog (blog) {
+        BlogsService.delete(blog);
+    }
+
   }]);
 }());
