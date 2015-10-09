@@ -13,11 +13,13 @@
 }
 
 .button-big,
-.button-read {
+.button-read,
+.button-create:hover {
   @include button(black, white, 2em);
 }
 
 .button-change,
+.button-create,
 .button-feature:hover {
   background: white;
   color: black;

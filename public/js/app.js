@@ -1,11 +1,26 @@
 (function() {
-  "use strict"
 
+  "use strict";
+
+  // Declare variable app, which equals a new AngularJS module
+  // with the name 'intelly'. ngRoute is a dependency used for
+  // routing and deeplinking services
   var app = angular.module('intellyApp', ["ngRoute"]);
 
-
+  // $routeProvider is a provider in the ngRoute module
+  // used for configuring routes.
+  // App routes are declared with $routeProvider.
   app.config(["$routeProvider", function($routeProvider) {
+      // The $location service parses the URL in the browser address bar (based on the window.location) and makes the URL available to your application
+      // This method is getter / setter.
+
+      // Return path of current url
+      // Add a new route definition to the $route service.
+      // The route path (/blog-post) is (matched against $location.path)
+      // which is a getter/setter that parses the address bar url
+      // and makes it available to our app
       $routeProvider.when('/blog-post', {
+        // This is the route object:
         templateUrl: "js/partials/blog-post.html",
         controller: "BlogsCtrl as vm"
       }).
@@ -25,41 +40,5 @@
         redirectTo: "/blog-post"
       });
     }]);
-
-
-
-  // var blogs = [
-
-  // {
-  //   title: 'Integer dictum erat et',
-  //   author: 'Goose',
-  //   content: 'The secular cooling that must someday overtake our planet has already gone far indeed with our neighbour. Its physical condition is still largely a mystery, but we know now that even in its equatorial region the midday temperature barely approaches that of our coldest winter. Its air is much more attenuated than ours its oceans have shrunk until they ',
-  //   date: 'August 23, 1976'
-
-  // },
-
-  // {
-  //   title: 'Integer dictum erat et',
-  //   author: 'Maverick',
-  //   content: 'The secular cooling that must someday overtake our planet has already gone far indeed with our neighbour. Its physical condition is still largely a mystery, but we know now that even in its equatorial region the midday temperature barely approaches that of our coldest winter. Its air is much more attenuated than ours its oceans have shrunk until they ',
-  //   date: 'August 23, 1976'
-
-  // },
-  //   {
-  //   title: 'Integer dictum erat et',
-  //   author: 'Viper',
-  //   content: 'The secular cooling that must someday overtake our planet has already gone far indeed with our neighbour. Its physical condition is still largely a mystery, but we know now that even in its equatorial region the midday temperature barely approaches that of our coldest winter. Its air is much more attenuated than ours its oceans have shrunk until they ',
-  //   date: 'August 23, 1976'
-
-  // },
-  //   {
-  //   title: 'Integer dictum erat et',
-  //   author: 'Iceman',
-  //   content: 'The secular cooling that must someday overtake our planet has already gone far indeed with our neighbour. Its physical condition is still largely a mystery, but we know now that even in its equatorial region the midday temperature barely approaches that of our coldest winter. Its air is much more attenuated than ours its oceans have shrunk until they ',
-  //   date: 'August 23, 1976'
-
-  // }
-
-  // ];
 
 })();
