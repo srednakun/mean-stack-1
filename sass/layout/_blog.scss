@@ -1,3 +1,22 @@
 .blog {
   margin-bottom: 6em;
+
+  .button-create {
+    display: block;
+    max-width: 12em;
+    margin: 2em auto 0;
+  }
+
+  .create-post {
+    width: 30em;
+    margin: 0 auto;
+    input {
+      display: block;
+    }
+    input[type=text], textarea {
+      width: 100%;
+      margin-bottom: font-size(1);
+    }
+  }
+
 }
