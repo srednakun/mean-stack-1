@@ -8,13 +8,14 @@
   padding-bottom: 1em;
   padding-left: $size;
   padding-right: $size;
+  margin-left: .25em;
+  margin-right: .25em;
   font-family: $font-primary;
   font-size: font-size(0);
 }
 
 .button-big,
-.button-read,
-.button-create:hover {
+.button-read {
   @include button(black, white, 2em);
 }
 

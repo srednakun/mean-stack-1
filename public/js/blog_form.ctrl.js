@@ -24,6 +24,7 @@
     //   }
     // }
 
+
     // function initialize () {
     //   if ($routeParams.blog_id) {
     //     get($routeParams.blog_id).then(function (resp) {
@@ -32,22 +33,23 @@
     //   }
     // }
 
-    function create(model) {
-        return $http.post(urlRoot, model);
+    function initialize () {
+      if ($routeParams.blog_id) {
+        BlogsService.get($routeParams.blog_id).then(function (resp) {
+          vm.blog = resp.data;
+        });
+      }
     }
 
     function submitForm () {
 
       var method;
 
-      // if (angular.isDefined(vm.post.number)) {
-      //   vm.post.number = parseInt(vm.post.number, 10);
-      // }
+      method = $routeParams.blog_id ? "update" : "create";
 
-      // method = $routeParams.blog_id ? "update" : "create";
-      create(vm.blog).then(function (resp) {
-        console.log(resp.data + "heloooooo");
-// $location.path("/blog-post/" + resp.data._id);
+      BlogsService[method](vm.blog).then(function (resp){
+        console.log(resp.data._id);
+        $location.path("/blog-post/" + resp.data._id);
       });
     }
   }]);
