@@ -6,16 +6,18 @@
 
     var vm = this;
 
+    vm.delete = deleteBlog;
+
     vm.save = submitForm;
 
-    vm.post = {};
+    vm.blog = {};
 
     initialize();
 
     function initialize () {
       if ($routeParams.blog_id) {
         BlogsService.get($routeParams.blog_id).then(function (resp) {
-          vm.post = resp.data;
+          vm.blog = resp.data;
         });
       }
     }
@@ -24,14 +26,17 @@
 
       var method;
 
-      if (angular.isDefined(vm.post.number)) {
-        vm.post.number = parseInt(vm.post.number, 10);
-      }
-
       method = $routeParams.blog_id ? "update" : "create";
-      BlogsService.create(vm.post).then(function (resp) {
+
+      BlogsService[method](vm.blog).then(function (resp){
+        console.log(resp.data._id);
         $location.path("/blog-post/" + resp.data._id);
       });
     }
+
+      function deleteBlog (blog) {
+        BlogsService.delete(blog);
+    }
+
   }]);
 }());

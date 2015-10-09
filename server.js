@@ -20,8 +20,6 @@ var Blog = require('./app/models/blog-post');
 var port = process.env.PORT || 8000;
 // Use built in middleware; pass the directory; use absolute path to directory to serve
 app.use(express.static(__dirname + '/public'));
-
-
 // API ROUTES - How our app responds to client requests
 // ==========
 // Get instance of Express Router to handle all our routes
@@ -41,7 +39,6 @@ router.get('/', function(req, res) {
 // app.route('/').get(function(req, res) {
 //    res.sendFile('index.html', {root: __dirname + '/public'});
 //  });
-
 // To handle multiple routes for the same URI; all req that end in /blog-post
 router.route('/blog-post')
   // Create a POST (accessed at POST localhost:8000/api/posts)
@@ -56,7 +53,7 @@ router.route('/blog-post')
     blog.save(function(err) {
       if (err)
           res.send(err);
-      res.json({ message: 'HIGH FIVE!!! Post created!' });
+      res.json(blog);
     });
   })
   // Get ALL the posts; chaining routes together...
@@ -67,7 +64,6 @@ router.route('/blog-post')
       res.json(blogs);
     });
   });
-
 // To handle all requests that have a :blog_id--accessed through body-parser
 router.route('/blog-post/:blog_id')
   // Get a post with that id (accessed at GET localhost:8000/api/blog-post/:blog_id)
@@ -92,7 +88,7 @@ router.route('/blog-post/:blog_id')
       blog.save(function(err) {
         if (err)
           res.send(err);
-        res.json({ message: 'Hell yeah! Blog updated!' });
+        res.json(blog);
       });
     });
   })
@@ -103,10 +99,9 @@ router.route('/blog-post/:blog_id')
     }, function(err, blog) {
         if (err)
           res.send(err);
-        res.json({ message: "Blog Deleted, how sad" });
+        res.json(blog);
     });
   });
-
 // START THE SERVER
 app.listen(port);
 console.log("Fancy stuff on port " + port);
