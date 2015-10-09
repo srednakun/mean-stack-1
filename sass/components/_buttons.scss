@@ -15,8 +15,7 @@
 }
 
 .button-big,
-.button-read,
-.button-create:hover {
+.button-read {
   @include button(black, white, 2em);
 }
 

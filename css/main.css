@@ -154,8 +154,7 @@ header {
   margin-left: 3.5em; }
 
 .button-big,
-.button-read,
-.button-create:hover {
+.button-read {
   text-transform: uppercase;
   background: black;
   color: white;
@@ -165,6 +164,8 @@ header {
   padding-bottom: 1em;
   padding-left: 2em;
   padding-right: 2em;
+  margin-left: .25em;
+  margin-right: .25em;
   font-family: "Ubuntu", sans-serif;
   font-size: 1rem; }
 
@@ -192,6 +193,8 @@ header {
   padding-bottom: 1em;
   padding-left: 1em;
   padding-right: 1em;
+  margin-left: .25em;
+  margin-right: .25em;
   font-family: "Ubuntu", sans-serif;
   font-size: 1rem; }
 
