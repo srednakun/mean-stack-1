@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  angular.module('app').controller("BlogsCtrl", ["BlogsService", function(BlogsService) {
+  angular.module('intellyApp').controller("BlogsCtrl", ["BlogsService", function(BlogsService) {
     var vm = this;
 
     vm.blogs = [];
@@ -16,6 +16,7 @@
     function getBlogs () {
       BlogsService.get().then(function(resp) {
         vm.blogs = resp.data;
+        console.log(vm.blogs);
       });
     }
 
