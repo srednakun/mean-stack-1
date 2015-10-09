@@ -35,8 +35,8 @@
        when('/blog-post/:blog_id/edit', {
         templateUrl: "js/partials/blog-post-detail.html",
         controller: "BlogsCtrl as vm"
-      })
-      .otherwise({
+      }).
+       otherwise({
         redirectTo: "/blog-post"
       });
     }]);
