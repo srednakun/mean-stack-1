@@ -30,7 +30,7 @@
       }).
       when('/blog-post/:blog_id', {
         templateUrl: "js/partials/blog-post-detail.html",
-        controller: "BlogsCtrl as vm"
+        controller: "BlogCtrl as vm"
       }).
        when('/blog-post/:blog_id/edit', {
         templateUrl: "js/partials/blog-post-detail.html",

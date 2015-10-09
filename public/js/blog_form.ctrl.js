@@ -2,11 +2,11 @@
 
   "use strict";
 
-  angular.module("intellyApp").controller("BlogFormCtrl", ["BlogsService", "$routeParams", "$location", function (BlogsService, $routeParams, $location) {
+  angular.module("intellyApp").controller("BlogFormCtrl", ["BlogsService", "$routeParams", "$location", "$http", function (BlogsService, $routeParams, $location, $http) {
 
     var vm = this;
 
-    vm.save = saveForm;
+    vm.save = submitForm;
 
     vm.post = {};
 
@@ -20,7 +20,8 @@
       }
     }
 
-    function saveForm () {
+    function submitForm () {
+
       var method;
 
       if (angular.isDefined(vm.post.number)) {
@@ -28,8 +29,8 @@
       }
 
       method = $routeParams.blog_id ? "update" : "create";
-      PlayersService[method](vm.player).then(function (resp) {
-        $location.path("/players/" + resp.data._id);
+      BlogsService.create(vm.post).then(function (resp) {
+        $location.path("/blog-post/" + resp.data._id);
       });
     }
   }]);
