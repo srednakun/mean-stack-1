@@ -33,8 +33,8 @@
         controller: "BlogCtrl as vm"
       }).
        when('/blog-post/:blog_id/edit', {
-        templateUrl: "js/partials/blog-post-detail.html",
-        controller: "BlogsCtrl as vm"
+        templateUrl: "js/partials/blog-post-form.html",
+        controller: "BlogFormCtrl as vm"
       }).
        otherwise({
         redirectTo: "/blog-post"

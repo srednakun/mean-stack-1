@@ -14,8 +14,6 @@
         .get($routeParams.blog_id)
         .then(function (resp) {
           vm.blog = resp.data;
-          console.log(vm.blog + ' the bomb diggity');
-          console.log(vm.blog[1]);
         });
     }
 

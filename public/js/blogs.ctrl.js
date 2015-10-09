@@ -16,7 +16,6 @@
     function getBlogs () {
       BlogsService.get().then(function(resp) {
         vm.blogs = resp.data;
-        console.log(vm.blogs);
       });
     }
 
