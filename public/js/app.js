@@ -1,23 +1,23 @@
 (function() {
   "use strict"
 
-  var app = angular.module('app', ["ngRoute"]);
+  var app = angular.module('intellyApp', ["ngRoute"]);
 
 
   app.config(["$routeProvider", function($routeProvider) {
       $routeProvider.when('/blog-post', {
         templateUrl: "js/partials/blog-post.html",
-        controller: "BlogsCtrl as vm"  // Problem Here
+        controller: "BlogsCtrl as vm"
       }).
       when('/blog-post/:blog_id', {
         templateUrl: "js/partials/blog-post-detail.html",
         controller: "BlogsCtrl as vm"
-      }).
+      })
+      .
       otherwise({
         redirectTo: "/blog-post"
       });
     }]);
-
 
 
 
