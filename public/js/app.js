@@ -9,12 +9,19 @@
         templateUrl: "js/partials/blog-post.html",
         controller: "BlogsCtrl as vm"
       }).
+      when('/blog-post/new', {
+        templateUrl: "js/partials/blog-post-form.html",
+        controller: "BlogFormCtrl as vm",
+      }).
       when('/blog-post/:blog_id', {
         templateUrl: "js/partials/blog-post-detail.html",
         controller: "BlogsCtrl as vm"
+      }).
+       when('/blog-post/:blog_id/edit', {
+        templateUrl: "js/partials/blog-post-detail.html",
+        controller: "BlogsCtrl as vm"
       })
-      .
-      otherwise({
+      .otherwise({
         redirectTo: "/blog-post"
       });
     }]);
