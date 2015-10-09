@@ -2,10 +2,10 @@
   <h1>{{ vm.blog.title }}</h1>
   <p>{{ vm.blog.content }}</p>
   <ul>
-    <li><a href="user">By {{ vm.blog.author }}</li>
-    <li><a href="user">{{ vm.blog.date}}</li>
-    <li><a href="user">4 comments</li>
+    <li>By {{ vm.blog.author }}</li>
+    <li>{{ vm.blog.date | date}}</li>
+    <li>4 comments</li>
   </ul>
   <a href="#/blog-post/{{ vm.blog._id }}/edit" class="button-big button-read">Edit</a>
-  <a href="#/blog-post/" class="button-big button-read">Back</a>
+  <a href="#/blog-post/" class="button-big button-read">Home</a>
 </article>

@@ -52,6 +52,13 @@
         $location.path("/blog-post/" + resp.data._id);
       });
     }
+
+      function deleteBlog (blog) {
+        BlogsService.delete(blog).then(function () {
+        getBlogs();
+      });
+    }
+
   }]);
 }());
 

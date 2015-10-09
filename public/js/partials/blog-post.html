@@ -1,11 +1,11 @@
 <article class="blog-post" ng-repeat="blog in vm.blogs">
   <h1>{{ blog.title }}</h1>
-  <p>{{ blog.content }}</p>
+  <p>{{ blog.content | limitTo:150 }}</p>
   <ul>
-    <li><a href="user">By {{ blog.author }}</li>
-    <li><a href="user">{{blog.date}}</li>
-    <li><a href="user">4 comments</li>
+    <li>By {{ blog.author }}</li>
+    <li>{{blog.date | date}}</li>
+    <li>4 comments</li>
   </ul>
   <a href="#/blog-post/{{ blog._id }}" class="button-big button-read">Read More</a>
-  <!-- <button ng-click="vm.delete(blog)" class="button-big button-read">Delete</button> -->
+  <a ng-click="vm.delete(blog)" class="button-big button-read">Delete</a>
 </article>

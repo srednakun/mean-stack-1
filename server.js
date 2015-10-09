@@ -88,7 +88,7 @@ router.route('/blog-post/:blog_id')
       blog.save(function(err) {
         if (err)
           res.send(err);
-        res.json({ message: 'Hell yeah! Blog updated!' });
+        res.json(blog);
       });
     });
   })
@@ -99,7 +99,7 @@ router.route('/blog-post/:blog_id')
     }, function(err, blog) {
         if (err)
           res.send(err);
-        res.json({ message: "Blog Deleted, how sad" });
+        res.json(blog);
     });
   });
 // START THE SERVER
