@@ -3,7 +3,7 @@
 
   "use strict";
 
-  angular.module("app").service("BlogsService", ["$http", function ($http) {
+  angular.module("intellyApp").service("BlogsService", ["$http", function ($http) {
 
     var urlRoot = "/api/blog-post";
 

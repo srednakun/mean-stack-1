@@ -1,5 +1,5 @@
 (function () {
-  angular.module("app").controller("BlogCtrl", ["BlogsService", "$routeParams", function (BlogsService, $routeParams) {
+  angular.module("intellyApp").controller("BlogCtrl", ["BlogsService", "$routeParams", function (BlogsService, $routeParams) {
     var vm = this;
 
     initialize();
@@ -9,6 +9,7 @@
         .get($routeParams.blog_id)
         .then(function (resp) {
           vm.blog = resp.data;
+          console.log(vm.blog + ' james')
         });
     }
   }]);
