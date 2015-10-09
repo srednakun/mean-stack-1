@@ -20,7 +20,7 @@ gulp.task("default", ["sass", "watch"], function() {
 });
 
 gulp.task("express", function() {
-	run("node server.js").exec().pipe(gulp.dest("output"));
+ run("node server.js").exec().pipe(gulp.dest("output"));
 });
 
 gulp.task("serve", ["sass", "express", "watch"], function() {
