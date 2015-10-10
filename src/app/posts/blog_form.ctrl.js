@@ -14,9 +14,7 @@ require('../app.js');
 
     vm.blog = {};
 
-
-
-    // initialize();
+    initialize();
 
     // function get (id) {
     //   if (angular.isDefined(id)) {

@@ -15,6 +15,10 @@ module.exports = {
       indentedSyntax: true, // Enable .sass syntax!
     }
   },
+  html: {
+    src: src + "/app/**/*.html",
+    dest: dest + "/views/",
+  },
   server: {
     serverFile: './server.js'
   },

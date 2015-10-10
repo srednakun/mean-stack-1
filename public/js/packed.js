@@ -45,10 +45,10 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(1);
-	__webpack_require__(3);
-	__webpack_require__(5);
 	__webpack_require__(6);
+	__webpack_require__(7);
 	__webpack_require__(8);
+	__webpack_require__(9);
 
 
 /***/ },
@@ -56,11 +56,68 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(2);
-	module.exports = angular;
+	__webpack_require__(4);
+
+	(function() {
+
+	  "use strict";
+
+	  // Declare variable app, which equals a new AngularJS module
+	  // with the name 'intelly'. ngRoute is a dependency used for
+	  // routing and deeplinking services
+	  var app = angular.module('intellyApp', ["ngRoute"]);
+
+	  // $routeProvider is a provider in the ngRoute module
+	  // used for configuring routes.
+	  // App routes are declared with $routeProvider.
+	  app.config(["$routeProvider", function($routeProvider) {
+	      // The $location service parses the URL in the browser address bar (based on the window.location) and makes the URL available to your application
+	      // This method is getter / setter.
+
+	      // Return path of current url
+	      // Add a new route definition to the $route service.
+	      // The route path (/blog-post) is (matched against $location.path)
+	      // which is a getter/setter that parses the address bar url
+	      // and makes it available to our app
+	      $routeProvider.when('/blog-post', {
+	        // This is the route object:
+	        templateUrl: "views/blog/blog-post.html",
+	        controller: "BlogsCtrl as vm"
+	      }).
+	      when('/blog-post/new', {
+	        templateUrl: "views/posts/blog-post-form.html",
+	        controller: "BlogFormCtrl as vm",
+	      }).
+	      when('/blog-post/:blog_id', {
+	        templateUrl: "views/posts/blog-post-detail.html",
+	        controller: "BlogCtrl as vm"
+	      }).
+	       when('/blog-post/:blog_id/edit', {
+	        templateUrl: "views/posts/blog-post-form.html",
+	        controller: "BlogFormCtrl as vm"
+	      }).
+	       when('/blog-post/:blog_id/destroy', {
+	        templateUrl: "views/posts/blog-post-detail.html",
+	        controller: "BlogFormCtrl as vm"
+	      }).
+	       otherwise({
+	        redirectTo: "/blog-post"
+	      });
+	    }]);
+
+	})();
 
 
 /***/ },
 /* 2 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(3);
+	module.exports = angular;
+
+
+/***/ },
+/* 3 */
 /***/ function(module, exports) {
 
 	/**
@@ -28969,15 +29026,15 @@
 	!window.angular.$$csp().noInlineStyle && window.angular.element(document.head).prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>');
 
 /***/ },
-/* 3 */
+/* 4 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(4);
+	__webpack_require__(5);
 	module.exports = 'ngRoute';
 
 
 /***/ },
-/* 4 */
+/* 5 */
 /***/ function(module, exports) {
 
 	/**
@@ -29974,123 +30031,10 @@
 
 
 /***/ },
-/* 5 */
-/***/ function(module, exports, __webpack_require__) {
-
-	
-
-	__webpack_require__(6);
-	__webpack_require__(8)
-
-	(function() {
-
-	  "use strict";
-
-	  // Declare variable app, which equals a new AngularJS module
-	  // with the name 'intelly'. ngRoute is a dependency used for
-	  // routing and deeplinking services
-	  var app = angular.module('intellyApp', ["ngRoute"]);
-
-	  // $routeProvider is a provider in the ngRoute module
-	  // used for configuring routes.
-	  // App routes are declared with $routeProvider.
-	  app.config(["$routeProvider", function($routeProvider) {
-	      // The $location service parses the URL in the browser address bar (based on the window.location) and makes the URL available to your application
-	      // This method is getter / setter.
-
-	      // Return path of current url
-	      // Add a new route definition to the $route service.
-	      // The route path (/blog-post) is (matched against $location.path)
-	      // which is a getter/setter that parses the address bar url
-	      // and makes it available to our app
-	      $routeProvider.when('/blog-post', {
-	        // This is the route object:
-	        templateUrl: "views/blog-post.html",
-	        controller: "BlogsCtrl as vm"
-	      }).
-	      when('/blog-post/new', {
-	        templateUrl: "views/blog-post-form.html",
-	        controller: "BlogFormCtrl as vm",
-	      }).
-	      when('/blog-post/:blog_id', {
-	        templateUrl: "views/blog-post-detail.html",
-	        controller: "BlogCtrl as vm"
-	      }).
-	       when('/blog-post/:blog_id/edit', {
-	        templateUrl: "views/blog-post-form.html",
-	        controller: "BlogFormCtrl as vm"
-	        }).
-	       when('/blog-post/:blog_id/destroy', {
-	        templateUrl: "views/blog-post-detail.html",
-	        controller: "BlogFormCtrl as vm"
-	      }).
-	       otherwise({
-	        redirectTo: "/blog-post"
-	      });
-	    }]);
-
-	})();
-
-
-/***/ },
 /* 6 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(7);
-
-
-/***/ },
-/* 7 */
-/***/ function(module, exports, __webpack_require__) {
-
-	__webpack_require__(5);
-
-	// Organize and share code around out app
-	(function() {
-
-	  "use strict";
-
-	  angular.module("intellyApp").service("BlogsService", ["$http", function ($http) {
-
-	    var urlRoot = "/api/blog-post";
-
-	    var Blog = {
-	      get: function (id) {
-	        if (angular.isDefined(id)) {
-	          return $http.get(urlRoot + "/" + id);
-	        } else {
-	          return $http.get(urlRoot);
-	        }
-	      },
-	      update: function (model) {
-	        return $http.put(urlRoot + "/" + model._id, model);
-	      },
-	      create: function (model) {
-	        return $http.post(urlRoot, model);
-	      },
-	      delete: function (model) {
-	        return $http.delete(urlRoot + "/" + model._id);
-	      }
-	    };
-	    return Blog;
-	  }]);
-	}());
-
-
-/***/ },
-/* 8 */
-/***/ function(module, exports, __webpack_require__) {
-
-	__webpack_require__(9);
-	__webpack_require__(10);
-	__webpack_require__(11);
-
-
-/***/ },
-/* 9 */
-/***/ function(module, exports, __webpack_require__) {
-
-	__webpack_require__(5);
+	__webpack_require__(1);
 
 	(function () {
 
@@ -30112,88 +30056,15 @@
 	    }
 
 	  }]);
-	})();
-
-
-
-/***/ },
-/* 10 */
-/***/ function(module, exports, __webpack_require__) {
-
-	__webpack_require__(5);
-
-	(function () {
-
-	  "use strict";
-
-	  angular.module("intellyApp").controller("BlogFormCtrl", ["BlogsService", "$routeParams", "$location", "$http", function (BlogsService, $routeParams, $location, $http) {
-
-	    var vm = this;
-
-	    var urlRoot = "/api/blog-post";
-
-	    vm.save = submitForm;
-
-	    vm.blog = {};
-
-
-
-	    // initialize();
-
-	    // function get (id) {
-	    //   if (angular.isDefined(id)) {
-	    //     return $http.get(urlRoot + "/" + id);
-	    //   } else {
-	    //     return $http.get(urlRoot);
-	    //   }
-	    // }
-
-
-	    // function initialize () {
-	    //   if ($routeParams.blog_id) {
-	    //     get($routeParams.blog_id).then(function (resp) {
-	    //       vm.blog = resp.data;
-	    //     });
-	    //   }
-	    // }
-
-	    function initialize () {
-	      if ($routeParams.blog_id) {
-	        BlogsService.get($routeParams.blog_id).then(function (resp) {
-	          vm.blog = resp.data;
-	        });
-	      }
-	    }
-
-	    function submitForm () {
-
-	      var method;
-
-	      method = $routeParams.blog_id ? "update" : "create";
-
-	      BlogsService[method](vm.blog).then(function (resp){
-	        console.log(resp.data._id);
-	        $location.path("/blog-post/" + resp.data._id);
-	      });
-	    }
-
-	      function deleteBlog (blog) {
-	        BlogsService.delete(blog).then(function () {
-	        getBlogs();
-	      });
-	    }
-
-	  }]);
 	}());
 
 
 
-
 /***/ },
-/* 11 */
+/* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(5);
+	__webpack_require__(1);
 
 	(function() {
 	  'use strict';
@@ -30221,6 +30092,109 @@
 	        getBlogs();
 	      });
 	    }
+	  }]);
+	}());
+
+
+/***/ },
+/* 8 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(1);
+
+	(function () {
+
+	  "use strict";
+
+	  angular.module("intellyApp").controller("BlogFormCtrl", ["BlogsService", "$routeParams", "$location", "$http", function (BlogsService, $routeParams, $location, $http) {
+
+	    var vm = this;
+
+	    var urlRoot = "/api/blog-post";
+
+	    vm.save = submitForm;
+
+	    vm.blog = {};
+
+	    initialize();
+
+	    // function get (id) {
+	    //   if (angular.isDefined(id)) {
+	    //     return $http.get(urlRoot + "/" + id);
+	    //   } else {
+	    //     return $http.get(urlRoot);
+	    //   }
+	    // }
+
+
+	    // function initialize () {
+	    //   if ($routeParams.blog_id) {
+	    //     get($routeParams.blog_id).then(function (resp) {
+	    //       vm.blog = resp.data;
+	    //     });
+	    //   }
+	    // }
+
+	    function initialize() {
+	      if ($routeParams.blog_id) {
+	        BlogsService.get($routeParams.blog_id).then(function (resp) {
+	          vm.blog = resp.data;
+	        });
+	      }
+	    }
+
+	    function submitForm() {
+
+	      var method;
+
+	      method = $routeParams.blog_id ? "update" : "create";
+
+	      BlogsService[method](vm.blog).then(function (resp) {
+	        console.log(resp.data._id);
+	        $location.path("/blog-post/" + resp.data._id);
+	      });
+	    }
+
+	  }]);
+	}());
+
+
+
+
+/***/ },
+/* 9 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(1);
+
+	// Organize and share code around out app
+	(function () {
+
+	  "use strict";
+
+	  angular.module("intellyApp").service("BlogsService", ["$http", function ($http) {
+
+	    var urlRoot = "/api/blog-post";
+
+	    var Blog = {
+	      get: function (id) {
+	        if (angular.isDefined(id)) {
+	          return $http.get(urlRoot + "/" + id);
+	        } else {
+	          return $http.get(urlRoot);
+	        }
+	      },
+	      update: function (model) {
+	        return $http.put(urlRoot + "/" + model._id, model);
+	      },
+	      create: function (model) {
+	        return $http.post(urlRoot, model);
+	      },
+	      delete: function (model) {
+	        return $http.delete(urlRoot + "/" + model._id);
+	      }
+	    };
+	    return Blog;
 	  }]);
 	}());
 

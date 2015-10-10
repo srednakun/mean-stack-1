@@ -1,6 +1,6 @@
 @charset "UTF-8";
 .title-description, .feature, header {
-  padding: 6em 0; }
+  padding: 6em 2em; }
 
 * {
   box-sizing: border-box; }
@@ -79,7 +79,7 @@ header {
   .top-navigation li {
     display: inline-block; }
   .top-navigation a {
-    margin: 0 rem(24px); }
+    margin: 0 16px; }
 
 .title-description h1 {
   margin-bottom: 1.333rem; }
@@ -96,6 +96,9 @@ header {
   .blog .create-post {
     width: 30em;
     margin: 2em auto; }
+    @media screen and (max-width: 35em) {
+      .blog .create-post {
+        width: 95%; } }
     .blog .create-post input {
       display: block; }
     .blog .create-post input[type=text], .blog .create-post textarea {
@@ -147,7 +150,7 @@ header {
   margin-left: .25em;
   margin-right: .25em;
   font-family: "Ubuntu", sans-serif;
-  font-size: rem(24px); }
+  font-size: 16px; }
 
 .button-change,
 .button-create,
@@ -159,9 +162,11 @@ header {
   font-weight: 400; }
 
 .button-feature {
+  display: inline-block;
   background: transparent;
   border: 1px solid white;
-  font-weight: 400; }
+  font-weight: 400;
+  margin-bottom: 1em; }
 
 .button-small {
   text-transform: uppercase;
@@ -176,7 +181,7 @@ header {
   margin-left: .25em;
   margin-right: .25em;
   font-family: "Ubuntu", sans-serif;
-  font-size: rem(24px); }
+  font-size: 16px; }
 
 .button-small:hover {
   background: black;
@@ -198,7 +203,7 @@ header {
 .top-navigation {
   font-family: "Ubuntu", sans-serif;
   font-weight: 400;
-  font-size: rem(24px);
+  font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 0.238em; }
   .top-navigation li:before {
@@ -252,39 +257,41 @@ header {
 .icon-text {
   color: #1e1d24;
   font-family: Ubuntu;
-  font-size: rem(24px);
+  font-size: 16px;
   font-weight: 700; }
 
-/******* TODO ********
-*                    *
-* Add Aria to icons  *
-*                    *
-**********************/
 .blog {
   background-color: #ffffff; }
-  .blog div {
-    border-bottom: 1px solid #d2d2d3; }
+  .blog .breadcrumbs {
+    border-bottom: 1px solid #bcbbbd; }
+    .blog .breadcrumbs ul {
+      padding-right: 2em; }
   .blog h1 {
     display: inline-block;
     padding-left: 7%;
     font-family: "Ubuntu", sans-serif;
-    font-size: rem(24px);
-    font-weight: font-weight(bold); }
+    font-size: 16px;
+    font-weight: font-weight(bold);
+    margin-top: 1em;
+    margin-bottom: 1em; }
   .blog ul {
     display: inline-block;
-    margin-left: 55%; }
+    margin-top: 1em;
+    float: right; }
   .blog li {
     padding-right: 10px;
     padding-left: 10px;
     font-family: "Ubuntu", sans-serif;
-    font-size: rem(24px);
+    font-size: 16px;
     color: #bcbbbd;
     text-align: right; }
   .blog .blog-post {
-    padding: 0 0 2em;
+    padding: 0 0 5em;
     margin: 6em 20% 5em;
     text-align: left;
     border-bottom: 1px solid #bcbbbd; }
+    .blog .blog-post div {
+      float: right; }
     .blog .blog-post h1 {
       font-size: 3em;
       padding-left: 0;
@@ -311,7 +318,8 @@ header {
     .blog .blog-post ul {
       display: inline;
       width: 75%;
-      margin: 0; }
+      margin: 0;
+      float: none; }
     .blog .blog-post .button-read {
       float: right; }
   .blog nav {
@@ -336,35 +344,32 @@ header {
     .blog nav li {
       padding: 0 2px; }
 
-footer .footer-top {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  padding-top: 2em;
-  border-bottom: 1px solid #d2d2d3; }
-  footer .footer-top a {
-    font-family: "Ubuntu", sans-serif; }
-  footer .footer-top .email-phone {
-    display: block;
-    padding-left: 0;
-    margin-left: -25%; }
-
-footer .footer-bottom {
-  text-align: center;
-  margin: 2em auto; }
-  footer .footer-bottom li {
-    font-size: .917em;
-    font-family: "Ubuntu", sans-serif;
-    padding: 0 0.5em; }
+footer {
+  padding: 2em 0; }
+  footer .footer-top {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 2em;
+    border-bottom: 1px solid #d2d2d3; }
+    footer .footer-top a {
+      font-family: "Ubuntu", sans-serif; }
+  footer .footer-bottom {
+    text-align: center;
+    margin: 2em auto; }
+    footer .footer-bottom li {
+      font-size: .917em;
+      font-family: "Ubuntu", sans-serif;
+      padding: 0 0.5em; }
 
 .feature {
   font-family: "Ubuntu", sans-serif;
@@ -385,11 +390,14 @@ footer .footer-bottom {
     padding-bottom: 1em; }
 
 .create-post input, .create-post textarea {
-  padding: .3em;
+  padding: 0.3em 1em;
   font-family: "Ubuntu", sans-serif;
-  font-size: rem(24px);
+  font-size: 16px;
   border: 1px solid #bbbbbd;
   border-radius: 5px; }
+
+.create-post li a {
+  display: inline-block; }
 
 .create-post textarea {
   min-height: 20em; }
@@ -398,7 +406,7 @@ footer .footer-bottom {
   padding: .5em; }
 
 .create-post input[type=submit] {
-  font-size: rem(24px);
+  font-size: 16px;
   padding: 1em 2em; }
 
 .create-post input[type=submit]:hover {
