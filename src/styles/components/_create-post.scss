@@ -1,5 +1,5 @@
 %form-style {
-  padding: .3em;
+  padding: .3em 1em;
   font-family: $font-primary;
   font-size: font-size(0);
   border: 1px solid color(secondary);
@@ -7,6 +7,10 @@
 }
 
 .create-post {
+  li a {
+    display: inline-block;
+  }
+
   input {
     @extend %form-style;
   }

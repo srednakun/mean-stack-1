@@ -1,4 +1,5 @@
 footer {
+  padding: 2em;
 
   .footer-top {
     display: flex;
@@ -8,15 +9,8 @@ footer {
     padding-top: 2em;
     border-bottom: 1px solid shades-primary(4);
 
-
     a {
       font-family: $font-primary;
-    }
-
-    .email-phone {
-      display: block;
-      padding-left: 0;
-      margin-left: -25%;
     }
   }
 

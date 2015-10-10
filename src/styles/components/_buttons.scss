@@ -31,9 +31,11 @@
 }
 
 .button-feature {
+  display: inline-block;
   background: transparent;
   border: 1px solid white;
-  font-weight: weight(regular)
+  font-weight: weight(regular);
+  margin-bottom: 1em;
 }
 
 

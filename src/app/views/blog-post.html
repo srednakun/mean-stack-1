@@ -6,6 +6,8 @@
     <li>{{blog.date | date}}</li>
     <li>4 comments</li>
   </ul>
-  <a href="#/blog-post/{{ blog._id }}" class="button-big button-read">Read More</a>
-  <a ng-click="vm.delete(blog)" class="button-big button-read">Delete</a>
+  <div>
+    <a href="#/blog-post/{{ blog._id }}" class="button-big button-read">Read More</a>
+    <a ng-click="vm.delete(blog)" class="button-big button-read">Delete</a>
+  </div>
 </article>

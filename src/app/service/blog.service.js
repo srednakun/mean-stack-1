@@ -1,7 +1,7 @@
 require('../app.js');
 
 // Organize and share code around out app
-(function() {
+(function () {
 
   "use strict";
 

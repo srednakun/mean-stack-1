@@ -40,7 +40,7 @@ require('./ctrl')
        when('/blog-post/:blog_id/edit', {
         templateUrl: "views/blog-post-form.html",
         controller: "BlogFormCtrl as vm"
-        }).
+      }).
        when('/blog-post/:blog_id/destroy', {
         templateUrl: "views/blog-post-detail.html",
         controller: "BlogFormCtrl as vm"
