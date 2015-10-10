@@ -1,5 +1,5 @@
-(function() {
-  'use strict';
+(function () {
+'use strict';
 
   angular.module('intellyApp').controller("BlogsCtrl", ["BlogsService", function(BlogsService) {
     var vm = this;

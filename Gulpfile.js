@@ -1,6 +1,5 @@
 var gulp = require("gulp");
 var sass = require("gulp-sass");
-var run = require("gulp-run");
 
 gulp.task("sass", function() {
   gulp.src("sass/**/*.scss")
@@ -8,7 +7,7 @@ gulp.task("sass", function() {
       includePaths: require("node-bourbon").includePaths
     })
       .on("error", sass.logError))
-    .pipe(gulp.dest("./css"));
+    .pipe(gulp.dest("./public/css"));
 });
 
 gulp.task('watch', function() {
@@ -24,6 +23,6 @@ gulp.task("express", function() {
 });
 
 gulp.task("serve", ["sass", "express", "watch"], function() {
-	
+
 });
 
