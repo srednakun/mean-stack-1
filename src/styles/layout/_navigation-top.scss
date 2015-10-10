@@ -1,0 +1,13 @@
+.top-navigation {
+  display: inline-block;
+  ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  li {
+    display: inline-block;
+  }
+  a {
+    margin: 0 font-size(0);
+  }
+}
