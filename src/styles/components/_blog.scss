@@ -1,0 +1,108 @@
+/******* TODO ********
+*                    *
+* Add Aria to icons  *
+*                    *
+**********************/
+
+.blog {
+  background-color: color(base);
+
+  div {
+    border-bottom: 1px solid shades-primary(4);
+  }
+
+  h1 {
+    display: inline-block;
+    padding-left: 7%;
+    font-family: $font-primary;
+    font-size: font-size(0);
+    font-weight: font-weight(bold);
+  }
+
+
+  ul {
+    display: inline-block;
+    margin-left: 55%;
+  }
+
+  li {
+    padding-right: 10px;
+    padding-left: 10px;
+    font-family: $font-primary;
+    font-size: font-size(0);
+    color: shades-primary(2);
+    text-align: right;
+  }
+
+  .blog-post {
+    padding: 0 0 2em;
+    margin: 6em 20% 5em;
+    text-align: left;
+    border-bottom: 1px solid shades-primary(2);
+
+
+    h1 {
+      font-size: 3em;
+      padding-left: 0;
+      padding-bottom: 1em;
+    }
+
+    p {
+      font-family: $font-primary;
+      font-weight: weight(light);
+      font-size: font-size(2);
+      color: shades-primary(2);
+      line-height: 2.75rem;
+      padding-bottom: 1em;
+    }
+
+    li {
+      text-align: left;
+      font-style: italic;
+      padding-left: 0;
+      padding-right: 10px;
+      a {
+        color: shades-primary(2);
+      }
+    }
+
+    li:before {
+      content: "•";
+      padding-right: 10px;
+    }
+
+    li:first-child:before {
+      display: none;
+    }
+
+    ul {
+      display: inline;
+      width: 75%;
+      margin: 0;
+    }
+
+    .button-read {
+      float: right;
+    }
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-top: 1em;
+    width: 60%;
+    margin: 0 auto;
+
+    ul {
+      margin: 0;
+      display: inline;
+    }
+
+    li {
+      padding: 0 2px;
+    }
+  }
+}

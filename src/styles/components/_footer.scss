@@ -1,0 +1,33 @@
+footer {
+
+  .footer-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 2em;
+    border-bottom: 1px solid shades-primary(4);
+
+
+    a {
+      font-family: $font-primary;
+    }
+
+    .email-phone {
+      display: block;
+      padding-left: 0;
+      margin-left: -25%;
+    }
+  }
+
+  .footer-bottom {
+    text-align: center;
+    margin: 2em auto;
+
+    li {
+      font-size: .917em;
+      font-family: $font-primary;
+      padding: 0 .5em;
+    }
+  }
+}

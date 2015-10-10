@@ -15,7 +15,7 @@ var mongoose = require('mongoose');
 // Connect to our local database, named directory auto generated
 mongoose.connect('mongodb://localhost/blogs');
 // Grab the blog post model
-var Blog = require('./app/models/blog-post');
+var Blog = require('./src/app/models/blog-post');
 // Environment defined port, OR 8000
 var port = process.env.PORT || 8000;
 // Use built in middleware; pass the directory; use absolute path to directory to serve
