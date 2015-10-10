@@ -7,6 +7,7 @@ require('../app.js');
     var vm = this;
 
     vm.posts = [];
+    var urlRoot = "/api/blog-post";
 
     initialize();
 
