@@ -290,8 +290,7 @@ header {
     padding: 0 0 5em;
     margin: 6em 20% 5em;
     text-align: left;
-    border-bottom: 1px solid #bcbbbd;
-    white-space: pre-wrap; }
+    border-bottom: 1px solid #bcbbbd; }
     .blog .blog-post div {
       float: right; }
     .blog .blog-post h1 {
@@ -304,7 +303,8 @@ header {
       font-size: 1.777rem;
       color: #bcbbbd;
       line-height: 2.75rem;
-      padding-bottom: 1em; }
+      padding-bottom: 1em;
+      white-space: pre-wrap; }
     .blog .blog-post li {
       text-align: left;
       font-style: italic;
@@ -322,8 +322,6 @@ header {
       width: 75%;
       margin: 0;
       float: none; }
-    .blog .blog-post .button-read {
-      float: right; }
   .blog nav {
     display: -webkit-flex;
     display: -ms-flexbox;
