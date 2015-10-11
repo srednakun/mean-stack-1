@@ -31,3 +31,8 @@ public/css/main.css
 
 #Output folder that contains server logs
 output
+
+# Compiled Public Directory
+public/
+
+
