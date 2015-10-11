@@ -1,7 +1,5 @@
-
-
-require('./service');
-require('./ctrl')
+require('angular');
+require('angular-route');
 
 (function() {
 
@@ -26,23 +24,23 @@ require('./ctrl')
       // and makes it available to our app
       $routeProvider.when('/blog-post', {
         // This is the route object:
-        templateUrl: "views/blog-post.html",
+        templateUrl: "views/blog/blog-post.html",
         controller: "BlogsCtrl as vm"
       }).
       when('/blog-post/new', {
-        templateUrl: "views/blog-post-form.html",
+        templateUrl: "views/posts/blog-post-form.html",
         controller: "BlogFormCtrl as vm",
       }).
       when('/blog-post/:blog_id', {
-        templateUrl: "views/blog-post-detail.html",
+        templateUrl: "views/posts/blog-post-detail.html",
         controller: "BlogCtrl as vm"
       }).
        when('/blog-post/:blog_id/edit', {
-        templateUrl: "views/blog-post-form.html",
+        templateUrl: "views/posts/blog-post-form.html",
         controller: "BlogFormCtrl as vm"
       }).
        when('/blog-post/:blog_id/destroy', {
-        templateUrl: "views/blog-post-detail.html",
+        templateUrl: "views/posts/blog-post-detail.html",
         controller: "BlogFormCtrl as vm"
       }).
        otherwise({
