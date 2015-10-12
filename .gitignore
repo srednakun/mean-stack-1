@@ -27,7 +27,7 @@ build/Release
 node_modules
 
 # Compiled Public Directory
-public/js
-public/styles
-public/views
+public/js/
+public/styles/
+public/views/
 
