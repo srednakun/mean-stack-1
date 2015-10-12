@@ -1,3 +1,3 @@
 var gulp = require('gulp');
 
-gulp.task('default', ['sass', 'html', 'webpack', 'serve', 'watch']);
+gulp.task('default', ['sass', 'fonts', 'html', 'webpack', 'serve', 'watch']);
