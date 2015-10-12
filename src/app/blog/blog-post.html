@@ -1,4 +1,4 @@
-<article class="blog-post ng-cloak" ng-repeat="blog in vm.blogs | orderBy:'-date'">
+<article class="blog-post" ng-repeat="blog in vm.blogs | orderBy:'-date'">
   <h1>{{ blog.title }}</h1>
   <p>{{ blog.content | limitTo:150 }}<span ng-if="blog.content.length > 150">...</span></p>
   <ul>
@@ -11,5 +11,5 @@
     <a ng-click="vm.delete(blog)" class="button-big button-read">Delete</a>
   </div>
 </article>
-<h1 class="no-show" ng-show="vm.blogs.length === 0">No Posts! Want to <a href='#/blog-post/new'>create one</a>?</h1>
+<h1 class="no-show ng-cloak" ng-show="vm.blogs.length === 0">No Posts! Want to <a href='#/blog-post/new'>create one</a>?</h1>
 
