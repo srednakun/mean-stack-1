@@ -16,6 +16,11 @@
 	li {
 		margin-right: 2em;
 		display: inline-block;
+		&:hover {
+			.icon-text {
+				color: color(accent);
+			}
+		}
 		.icon-circle {
 			.footer-icon {
 				left: 0;
