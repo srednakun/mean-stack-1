@@ -1,11 +1,18 @@
-<form class="create-post" ng-submit="vm.save()">
-  <input type="text" ng-model="vm.blog.title" placeholder="Your great post title" />
-  <textarea name="message" ng-model="vm.blog.content" placeholder="Words of greatness..."></textarea>
-  <input type="text" ng-model="vm.blog.author" placeholder="Who wrote this?" />
-  <ul>
-    <li><input type="submit" name="Submit" class="button-big"></li>
-    <li><a href="#/blog-post/" ng-click="vm.delete(vm.blog)" class="button-big button-read">Delete</a></li>
-    <li><a href="#/blog-post/" class="button-big">Home</a></li>
-  </ul>
-</form>
-
+<div class="blog-form">
+  <form name="postForm" class="create-post" ng-submit="postForm.$valid && vm.save()" novalidate>
+    <input type="text" ng-model="vm.blog.title" placeholder="Your great post title" required/>
+    <textarea name="message" ng-model="vm.blog.content" placeholder="Words of greatness..." required></textarea>
+    <input type="text" ng-model="vm.blog.author" placeholder="Who wrote this?" required/>
+    <ul>
+      <li><input type="submit" name="Submit" class="button-big"></li>
+      <li><a href="#/blog-post/" ng-click="vm.delete(vm.blog)" class="button-big button-read">Delete</a></li>
+      <li><a href="#/blog-post/" class="button-big">Home</a></li>
+    </ul>
+  </form>
+  <article class="post-preview">
+    <h1>Your Post:</h1>
+    <h2>{{ vm.blog.title }}</h2>
+    <p>{{ vm.blog.content }}</p>
+    <p>{{ vm.blog.author }}</p>
+  </article>
+</div>

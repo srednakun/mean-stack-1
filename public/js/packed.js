@@ -30038,6 +30038,8 @@
 
 	(function () {
 
+	  "use strict";
+
 	  angular.module("intellyApp").controller("BlogCtrl", ["BlogsService", "$routeParams", function (BlogsService, $routeParams) {
 
 	    var vm = this;
@@ -30067,15 +30069,24 @@
 	__webpack_require__(1);
 
 	(function() {
+
 	  'use strict';
 
 	  angular.module('intellyApp').controller("BlogsCtrl", ["BlogsService", "$anchorScroll", "$location", function(BlogsService, $anchorScroll, $location) {
+
 	    var vm = this;
 
+	    // Initialize blogs to an empty array
+	    // (since our page will render before data returns from get request)
 	    vm.blogs = [];
+
+	    // Create delete method using deleteBlog function
 	    vm.delete = deleteBlog;
+	    // Create scroll method using toBreadcrumbs function
 	    vm.scroll = toBreadcrumbs;
 
+
+	    // Initialize the controller
 	    initialize();
 
 	    function initialize () {
@@ -30083,9 +30094,13 @@
 	    }
 
 	    function getBlogs () {
+	      // Run the get method from the BlogsService service
+	      // Then (or success) send in a callback with the response (from promise)
 	      BlogsService.get().then(function(resp) {
+	        // Store the data in the blogs array
 	        // Set the property 'blogs' (array) equal to an array of objects
 	        vm.blogs = resp.data;
+	        console.log(vm.blogs);
 	      });
 	    }
 
@@ -30130,23 +30145,6 @@
 	    vm.delete = deleteBlog;
 
 	    initialize();
-
-	    // function get (id) {
-	    //   if (angular.isDefined(id)) {
-	    //     return $http.get(urlRoot + "/" + id);
-	    //   } else {
-	    //     return $http.get(urlRoot);
-	    //   }
-	    // }
-
-
-	    // function initialize () {
-	    //   if ($routeParams.blog_id) {
-	    //     get($routeParams.blog_id).then(function (resp) {
-	    //       vm.blog = resp.data;
-	    //     });
-	    //   }
-	    // }
 
 	    function initialize() {
 	      if ($routeParams.blog_id) {
@@ -30198,15 +30196,23 @@
 
 	  "use strict";
 
+	  // Name the service and specify the $http service as a dependency -- inject it to use it
 	  angular.module("intellyApp").service("BlogsService", ["$http", function ($http) {
 
+	    // Declare urlRoot
 	    var urlRoot = "/api/blog-post";
 
+	    // Declare blog object with 4 methods
 	    var Blog = {
+	      // Get function with blog post ID as argument
+	      // Function will return a promise
 	      get: function (id) {
+	        // Determine if a reference (post ID) is defined
 	        if (angular.isDefined(id)) {
+	          // Send in the URL with ID to the get method
 	          return $http.get(urlRoot + "/" + id);
 	        } else {
+	          // Send in the base URL
 	          return $http.get(urlRoot);
 	        }
 	      },
