@@ -5,8 +5,14 @@
     display: flex;
     justify-content: space-between;
     padding: 1em 2em;
+    @extend %flexbox;
+
+    h1 {
+      margin-left: 2em;
+    }
     ul {
       margin: 0;
+      margin-right: 2em;
     }
   }
 
