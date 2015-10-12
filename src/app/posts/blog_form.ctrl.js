@@ -13,6 +13,7 @@ require('../app.js');
     vm.save = submitForm;
 
     vm.blog = {};
+    vm.delete = deleteBlog;
 
     initialize();
 
@@ -41,6 +42,13 @@ require('../app.js');
       }
     }
 
+    function getBlogs () {
+      BlogsService.get().then(function(resp) {
+        // Set the property 'blogs' (array) equal to an array of objects
+        vm.blogs = resp.data;
+      });
+    }
+
     function submitForm() {
 
       var method;
@@ -50,6 +58,12 @@ require('../app.js');
       BlogsService[method](vm.blog).then(function (resp) {
         console.log(resp.data._id);
         $location.path("/blog-post/" + resp.data._id);
+      });
+    }
+
+    function deleteBlog (blog) {
+      BlogsService.delete(blog).then(function () {
+        getBlogs();
       });
     }
 

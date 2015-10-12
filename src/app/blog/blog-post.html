@@ -1,4 +1,4 @@
-<article class="blog-post" ng-repeat="blog in vm.blogs | orderBy:'date'">
+<article class="blog-post" ng-repeat="blog in vm.blogs | orderBy:'date' | limitTo: 2 | filter: x as results" >
   <h1>{{ blog.title }}</h1>
   <p>{{ blog.content | limitTo:150 }}</p>
   <ul>

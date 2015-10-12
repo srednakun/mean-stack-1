@@ -18,6 +18,7 @@ require('../app.js');
 
     function getBlogs () {
       BlogsService.get().then(function(resp) {
+        // Set the property 'blogs' (array) equal to an array of objects
         vm.blogs = resp.data;
       });
     }
@@ -35,6 +36,7 @@ require('../app.js');
 
       // call $anchorScroll()
       $anchorScroll();
-      }
+    }
+
   }]);
 }());
