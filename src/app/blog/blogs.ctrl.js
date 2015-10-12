@@ -32,9 +32,6 @@ require('../app.js');
         // Set the property 'blogs' (array) equal to an array of objects
         vm.blogs = resp.data;
         console.log(vm.blogs);
-        if (vm.blogs.length === 0) {
-          return false;
-        }
       });
     }
 
