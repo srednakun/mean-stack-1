@@ -2,14 +2,13 @@
   margin-bottom: 6em;
 
   .breadcrumbs {
-    display: flex;
-    justify-content: space-between;
-    padding: 1em 2em;
+    @extend %flex-box;
+    padding: 1em 6em;
     ul {
       margin: 0;
     }
   }
-
+  
   .no-show {
     margin: 3em auto;
     text-align: center;
