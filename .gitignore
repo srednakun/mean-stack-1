@@ -29,9 +29,6 @@ node_modules
 # Compiled CSS file
 public/css/main.css
 
-#Output folder that contains server logs
-output
-
 # Compiled Public Directory
 public/js/
 public/styles/
