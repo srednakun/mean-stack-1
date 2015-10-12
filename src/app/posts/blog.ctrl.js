@@ -2,6 +2,8 @@ require('../app.js');
 
 (function () {
 
+  "use strict";
+
   angular.module("intellyApp").controller("BlogCtrl", ["BlogsService", "$routeParams", function (BlogsService, $routeParams) {
 
     var vm = this;

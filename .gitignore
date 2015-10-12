@@ -33,6 +33,8 @@ public/css/main.css
 output
 
 # Compiled Public Directory
-public/
+public/js/
+public/styles/
+public/views/
 
 

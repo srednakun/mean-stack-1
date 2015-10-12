@@ -1,15 +1,23 @@
 require('../app.js');
 
 (function() {
+
   'use strict';
 
   angular.module('intellyApp').controller("BlogsCtrl", ["BlogsService", "$anchorScroll", "$location", function(BlogsService, $anchorScroll, $location) {
+
     var vm = this;
 
+    // Initialize blogs to an empty array
+    // (since our page will render before data returns from get request)
     vm.blogs = [];
+
+    // Create delete method using deleteBlog function
     vm.delete = deleteBlog;
+    // Create scroll method using toBreadcrumbs function
     vm.scroll = toBreadcrumbs;
 
+    // Initialize the controller
     initialize();
 
     function initialize () {
@@ -17,8 +25,13 @@ require('../app.js');
     }
 
     function getBlogs () {
+      // Run the get method from the BlogsService service
+      // Then (or success) send in a callback with the response (from promise)
       BlogsService.get().then(function(resp) {
+        // Store the data in the blogs array
+        // Set the property 'blogs' (array) equal to an array of objects
         vm.blogs = resp.data;
+        console.log(vm.blogs);
       });
     }
 
@@ -35,6 +48,7 @@ require('../app.js');
 
       // call $anchorScroll()
       $anchorScroll();
-      }
+    }
+
   }]);
 }());

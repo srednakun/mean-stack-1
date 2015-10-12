@@ -1,5 +1,4 @@
 %form-style {
-  padding: .3em 1em;
   font-family: $font-primary;
   font-size: font-size(0);
   border: 1px solid color(secondary);
@@ -13,9 +12,11 @@
 
   input {
     @extend %form-style;
+    padding: .3em .3em;
   }
   textarea {
     @extend %form-style;
+    padding: .3em .3em;
     min-height: 20em;
   }
   input[type=text] {
