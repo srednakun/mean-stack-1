@@ -8,8 +8,8 @@
   </ul>
   <div>
     <a href="#/blog-post/{{ blog._id }}" ng-click="vm.scroll()" class="button-big button-read">Read More</a>
-    <a ng-click="vm.delete(blog)" class="button-big button-read">Delete</a>
+    <!-- <a ng-click="vm.delete(blog)" class="button-big button-read">Delete</a> -->
   </div>
 </article>
-<h1 class="no-show ng-cloak" ng-show="vm.blogs.length === 0">No Posts! Want to <a href='#/blog-post/new'>create one</a>?</h1>
+<h1 class="no-show ng-cloak" ng-hide="vm.blogs.getBlogs()">No Posts! Want to <a href='#/blog-post/new'>create one</a>?</h1>
 

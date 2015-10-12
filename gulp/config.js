@@ -15,6 +15,11 @@ module.exports = {
       indentedSyntax: true, // Enable .sass syntax!
     }
   },
+  fonts: {
+      src: src + '/styles/fonts/',
+      dest: dest + "/styles/fonts/",
+      extensions: ['woff2', 'woff', 'eot', 'ttf', 'svg']
+  },
   html: {
     src: src + "/app/**/*.html",
     dest: dest + "/views/",
