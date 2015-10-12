@@ -17,7 +17,6 @@ require('../app.js');
     // Create scroll method using toBreadcrumbs function
     vm.scroll = toBreadcrumbs;
 
-
     // Initialize the controller
     initialize();
 

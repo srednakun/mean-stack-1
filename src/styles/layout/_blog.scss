@@ -17,6 +17,36 @@
 
   .blog-post {
     margin: 6em 20% 5em;
+
+    div {
+      float: right;
+    }
+
+    ul {
+      width: 75%;
+      margin: 0;
+      float: none;
+    }
+
+    .button-read {
+      float: right;
+    }
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+    margin: 0 auto;
+
+    ul {
+      margin: 0;
+      display: inline;
+      min-width: 175px;
+
+    }
   }
 
   .button-create {

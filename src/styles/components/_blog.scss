@@ -38,10 +38,6 @@
     text-align: left;
     border-bottom: 1px solid shades-primary(2);
 
-    div {
-      float: right;
-    }
-
     h1 {
       font-family: $font-primary;
       font-size: 3em;
@@ -56,6 +52,7 @@
       color: shades-primary(2);
       line-height: 2.75rem;
       padding-bottom: 1em;
+      white-space: pre-wrap;
     }
 
     li {
@@ -82,31 +79,12 @@
 
     ul {
       display: inline;
-      width: 75%;
-      margin: 0;
-      float: none;
     }
 
-    .button-read {
-      float: right;
-    }
   }
 
   nav {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
     padding-top: 1em;
-    width: 60%;
-    margin: 0 auto;
-
-    ul {
-      margin: 0;
-      display: inline;
-      min-width: 175px;
-
-    }
 
     li {
       padding: 0 2px;

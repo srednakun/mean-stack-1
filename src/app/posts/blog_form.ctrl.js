@@ -13,6 +13,7 @@ require('../app.js');
     vm.save = submitForm;
 
     vm.blog = {};
+
     vm.delete = deleteBlog;
 
     initialize();

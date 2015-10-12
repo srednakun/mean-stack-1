@@ -30085,7 +30085,6 @@
 	    // Create scroll method using toBreadcrumbs function
 	    vm.scroll = toBreadcrumbs;
 
-
 	    // Initialize the controller
 	    initialize();
 
@@ -30142,6 +30141,7 @@
 	    vm.save = submitForm;
 
 	    vm.blog = {};
+
 	    vm.delete = deleteBlog;
 
 	    initialize();

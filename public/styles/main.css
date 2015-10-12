@@ -107,6 +107,33 @@ header {
     width: 30%; }
   .blog .blog-post {
     margin: 6em 20% 5em; }
+    .blog .blog-post div {
+      float: right; }
+    .blog .blog-post ul {
+      width: 75%;
+      margin: 0;
+      float: none; }
+    .blog .blog-post .button-read {
+      float: right; }
+  .blog nav {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 60%;
+    margin: 0 auto; }
+    .blog nav ul {
+      margin: 0;
+      display: inline;
+      min-width: 175px; }
   .blog .button-create {
     display: block;
     max-width: 12em;
@@ -165,15 +192,6 @@ header {
 .feature .button-feature {
   margin-left: 1.333rem;
   margin-right: 1.333rem; }
-
-.big-indent-left {
-  margin-left: 5em; }
-
-.big-indent-right {
-  margin-right: 5em; }
-
-.small-indent-left {
-  margin-left: 3.5em; }
 
 .button-big,
 .button-read {
@@ -326,8 +344,6 @@ header {
     padding: 0 0 5em;
     text-align: left;
     border-bottom: 1px solid #bcbbbd; }
-    .blog .blog-post div {
-      float: right; }
     .blog .blog-post h1 {
       font-family: "Ubuntu", sans-serif;
       font-size: 3em;
@@ -339,7 +355,8 @@ header {
       font-size: 1.777rem;
       color: #bcbbbd;
       line-height: 2.75rem;
-      padding-bottom: 1em; }
+      padding-bottom: 1em;
+      white-space: pre-wrap; }
     .blog .blog-post li {
       font-family: "Ubuntu", sans-serif;
       text-align: left;
@@ -355,32 +372,9 @@ header {
     .blog .blog-post li:first-child:before {
       display: none; }
     .blog .blog-post ul {
-      display: inline;
-      width: 75%;
-      margin: 0;
-      float: none; }
-    .blog .blog-post .button-read {
-      float: right; }
+      display: inline; }
   .blog nav {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    padding-top: 1em;
-    width: 60%;
-    margin: 0 auto; }
-    .blog nav ul {
-      margin: 0;
-      display: inline;
-      min-width: 175px; }
+    padding-top: 1em; }
     .blog nav li {
       padding: 0 2px; }
 
