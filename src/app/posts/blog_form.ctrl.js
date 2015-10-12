@@ -14,24 +14,9 @@ require('../app.js');
 
     vm.blog = {};
 
+    vm.delete = deleteBlog;
+
     initialize();
-
-    // function get (id) {
-    //   if (angular.isDefined(id)) {
-    //     return $http.get(urlRoot + "/" + id);
-    //   } else {
-    //     return $http.get(urlRoot);
-    //   }
-    // }
-
-
-    // function initialize () {
-    //   if ($routeParams.blog_id) {
-    //     get($routeParams.blog_id).then(function (resp) {
-    //       vm.blog = resp.data;
-    //     });
-    //   }
-    // }
 
     function initialize() {
       if ($routeParams.blog_id) {
@@ -39,6 +24,13 @@ require('../app.js');
           vm.blog = resp.data;
         });
       }
+    }
+
+    function getBlogs () {
+      BlogsService.get().then(function(resp) {
+        // Set the property 'blogs' (array) equal to an array of objects
+        vm.blogs = resp.data;
+      });
     }
 
     function submitForm() {
@@ -50,6 +42,12 @@ require('../app.js');
       BlogsService[method](vm.blog).then(function (resp) {
         console.log(resp.data._id);
         $location.path("/blog-post/" + resp.data._id);
+      });
+    }
+
+    function deleteBlog (blog) {
+      BlogsService.delete(blog).then(function () {
+        getBlogs();
       });
     }
 
