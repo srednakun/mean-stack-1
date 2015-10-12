@@ -11,5 +11,5 @@
     <!-- <a ng-click="vm.delete(blog)" class="button-big button-read">Delete</a> -->
   </div>
 </article>
-<h1 class="no-show ng-cloak" ng-hide="vm.blogs">No Posts! Want to <a href='#/blog-post/new'>create one</a>?</h1>
+<h1 class="no-show ng-cloak" ng-show="vm.blogs.length < 1">No Posts! Want to <a href='#/blog-post/new'>create one</a>?</h1>
 
