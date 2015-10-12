@@ -20,7 +20,5 @@ require('../app.js');
           vm.blog = resp.data;
         });
     }
-
   }]);
 }());
-

@@ -38,7 +38,6 @@
   margin-bottom: 1em;
 }
 
-
 .button-small {
   @include button(white, black, 1em);
 }
@@ -47,5 +46,3 @@
   background: black;
   color: white;
 }
-
-

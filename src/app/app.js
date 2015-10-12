@@ -47,5 +47,4 @@ require('angular-route');
         redirectTo: "/blog-post"
       });
     }]);
-
 })();

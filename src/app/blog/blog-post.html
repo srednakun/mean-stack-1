@@ -1,4 +1,4 @@
-<article class="blog-post" ng-repeat="blog in vm.blogs | orderBy:'-date'">
+<article class="blog-post ng-cloak" ng-repeat="blog in vm.blogs | orderBy:'-date'">
   <h1>{{ blog.title }}</h1>
   <p>{{ blog.content | limitTo:150 }}<span ng-if="blog.content.length > 150">...</span></p>
   <ul>
@@ -8,8 +8,16 @@
   </ul>
   <div>
     <a href="#/blog-post/{{ blog._id }}" ng-click="vm.scroll()" class="button-big button-read">Read More</a>
-    <!-- <a ng-click="vm.delete(blog)" class="button-big button-read">Delete</a> -->
   </div>
 </article>
-<h1 class="no-show ng-cloak" ng-show="vm.blogs.length < 1">No Posts! Want to <a href='#/blog-post/new'>create one</a>?</h1>
+<h2 class="no-show" ng-show="vm.blogs.length === 0">No Posts! Want to <a href='#/blog-post/new'>create one</a>?</h2>
 
+<nav ng-show="vm.blogs.length !== 0">
+  <a href="prev" class="button-big button-change">Prev</a>
+  <ul>
+    <li><a href="1" class="button-small" ng-click="page = 1">1</a></li>
+    <li><a href="2" class="button-small" ng-click="page = 2">2</a></li>
+    <li><a href="3" class="button-small" ng-click="page = 3">3</a></li>
+  </ul>
+  <a href="next" class="button-big button-change">Next</a>
+</nav>

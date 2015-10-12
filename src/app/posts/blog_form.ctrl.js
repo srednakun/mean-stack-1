@@ -50,8 +50,5 @@ require('../app.js');
         getBlogs();
       });
     }
-
   }]);
 }());
-
-

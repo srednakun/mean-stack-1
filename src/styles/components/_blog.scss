@@ -8,9 +8,11 @@
       color: color(secondary);
     }
 
-    h1 {
+    h2 {
+      font-size: font-size(2);
       margin-top: 1em;
       margin-bottom: 1em;
+      background-color: red;
     }
   }
 
@@ -42,7 +44,7 @@
     padding: 0 0 5em;
     text-align: left;
     border-bottom: 1px solid shades-primary(2);
-    
+
     h1 {
       font-family: $font-primary;
       font-size: 3em;
