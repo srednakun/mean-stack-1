@@ -1,9 +1,11 @@
 %section-padding-top-bottom, {
   padding: 6em 2em;
 }
-@mixin margin-right($margin) {
-	margin-right: $margin;
-}
-@mixin margin-left($margin) {
-	margin-left: $margin;
+%flex-box {
+	display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: flex-start;
+    align-items: flex-start;
 }
