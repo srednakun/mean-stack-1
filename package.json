@@ -3,19 +3,7 @@
   "version": "1.0.0",
   "description": "Last week we focussed on JavaScript basics. This week we're going to build up a function web application. You'll be expected to build on knowledge you've already learned (semantic HTML, Sass instead of CSS, in addition to all of the Angular work we'll be doing) and produce a \"production-ready\" blog for your assignment this week.",
   "main": "server.js",
-  "scripts": {
-    "build": "gulp",
-    "start": "node app.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/pstrum/mean-stack-1.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/pstrum/mean-stack-1/issues"
-  },
+  
   "homepage": "https://github.com/pstrum/mean-stack-1#readme",
   "dependencies": {
     "angular": "^1.4.7",
@@ -36,5 +24,18 @@
     "require-dir": "^0.3.0",
     "webpack": "^1.12.2",
     "webpack-stream": "^2.1.1"
+  },
+  "scripts": {
+    "build": "gulp",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pstrum/mean-stack-1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pstrum/mean-stack-1/issues"
   }
 }
