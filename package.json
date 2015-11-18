@@ -25,10 +25,6 @@
     "webpack": "^1.12.2",
     "webpack-stream": "^2.1.1"
   },
-  "scripts": {
-    "build": "gulp",
-    "start": "node server.js"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pstrum/mean-stack-1.git"
