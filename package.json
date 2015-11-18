@@ -4,7 +4,8 @@
   "description": "Last week we focussed on JavaScript basics. This week we're going to build up a function web application. You'll be expected to build on knowledge you've already learned (semantic HTML, Sass instead of CSS, in addition to all of the Angular work we'll be doing) and produce a \"production-ready\" blog for your assignment this week.",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "build": "gulp",
+  "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
